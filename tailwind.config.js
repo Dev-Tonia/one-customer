@@ -8,7 +8,7 @@ export default {
         inter: ["Inter", "sans-serif"],
       },
       colors: {
-        sideHover: "#222E3C",
+        primary: "#142340",
       },
     },
   },

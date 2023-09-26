@@ -8,7 +8,7 @@ const providers = useNetworkProvider();
 </script>
 <template>
   <LayoutVue>
-    <CardVue>
+    <CardVue class="py-5">
       <h1 class="text-2xl font-bold text-center">Select Your Data Provider</h1>
     </CardVue>
     <div class="grid grid-cols-2 lg:grid-cols-4 gap-5">

@@ -12,7 +12,7 @@ export const useNetworkProvider = defineStore("networkProvider", {
       },
       {
         name: "GLO",
-        img: "https://res.cloudinary.com/tonia/image/upload/v1695643582/images/glo_rxkyg1.jpg",
+        img: "https://res.cloudinary.com/tonia/image/upload/v1695643582/images/GLO_ryur71.jpg",
       },
       {
         name: "9MOBILE",

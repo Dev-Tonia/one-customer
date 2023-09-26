@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from "vue";
+
 import LayoutVue from "../components/Layout.vue";
 import NetworkCard from "../components/NetworkCard.vue";
 import CardVue from "../components/Card.vue";
@@ -8,7 +8,7 @@ const providers = useNetworkProvider();
 </script>
 <template>
   <LayoutVue>
-    <CardVue>
+    <CardVue class=" py-5">
       <h1 class="text-2xl font-bold text-center">
         Select Your Network Provider
       </h1>

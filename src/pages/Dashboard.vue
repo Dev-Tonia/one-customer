@@ -4,13 +4,13 @@ import Card from "../components/Card.vue";
 </script>
 <template>
   <Layout>
-    <Card>
+    <Card class="py-5">
       <h1 class="text-xl font-semibold mt-1 mb-4">
         Fund Wallet with VFD Account Number: 1029105595
       </h1>
     </Card>
     <div class="sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-      <Card>
+      <Card class="py-5">
         <div class="flex items-start justify-between">
           <h5 class="font-semibold text-gray-400 mb-2">Transactions</h5>
           <div
@@ -23,7 +23,7 @@ import Card from "../components/Card.vue";
           <h1 class="text-3xl">0</h1>
         </div>
       </Card>
-      <Card>
+      <Card class="py-5">
         <div class="flex items-start justify-between">
           <h5 class="font-semibold text-gray-400 mb-2">Withdrawals</h5>
           <div
@@ -36,7 +36,7 @@ import Card from "../components/Card.vue";
           <h1 class="text-3xl">0</h1>
         </div>
       </Card>
-      <Card>
+      <Card class="py-5">
         <div class="flex items-start justify-between">
           <h5 class="font-semibold text-gray-400 mb-2">Total Deposit</h5>
           <div
@@ -49,7 +49,7 @@ import Card from "../components/Card.vue";
           <h1 class="text-3xl">0</h1>
         </div>
       </Card>
-      <Card>
+      <Card class="py-5">
         <div class="flex items-start justify-between">
           <h5 class="font-semibold text-gray-400 mb-2">Balance</h5>
           <div
@@ -63,7 +63,7 @@ import Card from "../components/Card.vue";
         </div>
       </Card>
     </div>
-    <Card>
+    <Card class="py-5">
       <div class="py-4">
         <h5 class="font-semibold text-gray-400 mb-2">Latest Transactions</h5>
       </div>
