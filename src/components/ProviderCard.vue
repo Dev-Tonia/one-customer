@@ -4,17 +4,17 @@ const { provider, activeTab } = defineProps(["provider", "activeTab"]);
 </script>
 <template>
   <CardVue
-    class="w-40 flex justify-center pt-2 -mr-10 cursor-pointer overflow-clip"
+    class="min-[420px]:w-40 mb-0 flex justify-center pt-2 min-[420px]:-mr-1 sm:-mr-5 cursor-pointer overflow-clip"
     :class="{
-      'border-2 border-green-500 z-30': activeTab === provider.name,
-      'border-2': activeTab !== provider.name,
+      'border-2 border-green-500 z-30 grayscale-0': activeTab === provider.name,
+      'border-2 grayscale': activeTab !== provider.name,
     }"
   >
     <div>
       <div class="h-12 w-16 rounded-md overflow-hidden">
-        <img :src="provider.img" alt="" class="w-full bg-cover" />
+        <img :src="provider.img" alt="" class="" />
       </div>
-      <p class="text-center text-lg mt-2">{{ provider.name }}</p>
+      <p class="text-center text-sm md:text-lg mt-2">{{ provider.name }}</p>
     </div>
   </CardVue>
 </template>

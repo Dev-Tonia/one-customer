@@ -3,34 +3,37 @@ import { useOpenNavbarStore } from "../store/openNavbar";
 const openSideBar = useOpenNavbarStore();
 </script>
 <template>
-  <div :class="{ 'ml-64': openSideBar.isOpen }">
-    <header class="py-3 px-5 bg-white">
-      <nav class="">
-        <div class="flex justify-start">
-          <i
-            class="ri-menu-2-fill text-2xl font-bold cursor-pointer"
-            @click="openSideBar.updateIsOpen"
-          ></i>
+  <div :class="{ 'md:flex': openSideBar.isOpen }">
+    <div :class="{ 'md:w-1/3': openSideBar.isOpen }"></div>
+    <div :class="{ ' md:w-2/3': openSideBar.isOpen }">
+      <header class="py-3 px-5 bg-white">
+        <nav class="">
+          <div class="flex justify-start">
+            <i
+              class="ri-menu-2-fill text-2xl font-bold cursor-pointer"
+              @click="openSideBar.updateIsOpen"
+            ></i>
+          </div>
+        </nav>
+      </header>
+      <main class="bg-[#F3F5F9] py-5 px-6">
+        <slot>Easy Pay </slot>
+      </main>
+      <footer class="bg-white py-3 px-5">
+        <div class="flex justify-between">
+          <div class="flex">
+            <p class="font-semibold text-gray-400">Easy Pay</p>
+            <span class="font-light">&copy;</span>
+          </div>
+          <div class="">
+            <a href="#" class="text-gray-400 mr-2 inline-block hover:underline"
+              >Contact</a
+            >
+            <a href="#" class="text-gray-400 hover:underline">Privacy</a>
+          </div>
         </div>
-      </nav>
-    </header>
-    <main class="bg-[#F3F5F9] py-5 px-6">
-      <slot>Easy Pay </slot>
-    </main>
-    <footer class="bg-white py-3 px-5">
-      <div class="flex justify-between">
-        <div class="flex">
-          <p class="font-semibold text-gray-400">Easy Pay</p>
-          <span class="font-light">&copy;</span>
-        </div>
-        <div class="">
-          <a href="#" class="text-gray-400 mr-2 inline-block hover:underline"
-            >Contact</a
-          >
-          <a href="#" class="text-gray-400 hover:underline">Privacy</a>
-        </div>
-      </div>
-    </footer>
+      </footer>
+    </div>
   </div>
 </template>
 <style scoped>
