@@ -57,31 +57,6 @@ const mtnValues = [
     value: "200 daily",
     amount: 200,
   },
-  {
-    title: "350 1GB Daily Plan + 3mins Daily",
-    value: "350 daily",
-    amount: 350,
-  },
-  {
-    title: "600 2.5GB 2-Day Plan Daily",
-    value: "600 daily",
-    amount: 600,
-  },
-  {
-    title: " 800 3GB 2-Days Bundle Daily",
-    value: "800 daily",
-    amount: 800,
-  },
-  {
-    title: "200 Xtratalk 200 3days Bundle Daily",
-    value: "200 daily Xtratalk",
-    amount: 200,
-  },
-  {
-    title: "200 Xtradata 200 3days Bundle Daily",
-    value: "200 daily Xtradata",
-    amount: 200,
-  },
 ];
 const gloValues = [
   {
@@ -135,29 +110,30 @@ const airtelValue = [
   },
 ];
 const networkProvider = computed(() => {
-  // return author.books.length > 0 ? 'Yes' : 'No'
-  console.log(activeTab.value);
-  // console.log(mtnValues);
-  if (activeTab.value === "MTN") {
-    dataOption.selectOption = {};
-
-    return mtnValues;
-  } else if (activeTab.value === "GLO") {
-    dataOption.selectOption = {};
-
-    return gloValues;
-  } else if (activeTab.value === "AIRTEL") {
-    dataOption.selectOption = {};
-
-    return airtelValue;
-  } else if (activeTab.value === "9MOBILE") {
-    dataOption.selectOption = {};
-
-    return estisalateValue;
-  } else {
-    dataOption.selectOption = {};
-    return activeTab.value;
+  let returnValue;
+  switch (activeTab.value) {
+    case "MTN":
+      dataOption.selectOption = {};
+      returnValue = mtnValues;
+      break;
+    case "GLO":
+      dataOption.selectOption = {};
+      returnValue = gloValues;
+      break;
+    case "AIRTEL":
+      dataOption.selectOption = {};
+      returnValue = airtelValue;
+      break;
+    case "9MOBILE":
+      dataOption.selectOption = {};
+      returnValue = estisalateValue;
+      break;
+    default:
+      dataOption.selectOption = {};
+      returnValue = activeTab.value;
+      break;
   }
+  return returnValue;
 });
 </script>
 <template>
@@ -197,10 +173,15 @@ const networkProvider = computed(() => {
             disabled
             :placeholder="placeholderForVtu || ' VTU'"
           />
-          <CustomSelectVue :networkProvider="networkProvider" />
-          <p v-if="networkProvider === ''" class="text-red-500 italic text-sm">
-            Please choose your network provider
-          </p>
+          <div class="">
+            <CustomSelectVue :networkProvider="networkProvider" />
+            <p
+              v-if="networkProvider === ''"
+              class="text-red-500 italic text-sm"
+            >
+              Please choose your network provider
+            </p>
+          </div>
           <div
             class="flex w-full px-3 bg-[#F3F5F9] rounded-lg my-4 items-center"
           >

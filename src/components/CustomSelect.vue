@@ -13,7 +13,7 @@ const dataOption = useBuyData();
       class="bg-[#F3F5F9]"
       v-model="dataOption.selectOption"
     >
-      <option value="" selected disabled>Select Your Data Plan</option>
+      <option value="" selected disabled>Select A Plan</option>
       <option
         v-for="items in networkProvider"
         :value="items"
