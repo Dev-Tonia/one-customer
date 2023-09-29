@@ -11,8 +11,8 @@ const { provider, activeTab } = defineProps(["provider", "activeTab"]);
     }"
   >
     <div>
-      <div class="h-12 w-16 rounded-md overflow-hidden">
-        <img :src="provider.img" alt="" class="" />
+      <div class="h-12 w-16 rounded-md overflow-hidden flex justify-center">
+        <img :src="provider.img" alt="" class="w-full bg-contain" />
       </div>
       <p class="text-center text-sm md:text-lg mt-2">{{ provider.name }}</p>
     </div>

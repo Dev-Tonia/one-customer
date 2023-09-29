@@ -128,7 +128,8 @@ const networkProvider = computed(() => {
           Purchase Your Cable subscription
         </h1>
         <p class="italic text-[10px] text-green-500 font-medium">
-          "Unlimited entertainment, one subscription away. Dive in now!"
+          "Unlimited entertainment, one subscription away: Immerse yourself in
+          endless entertainment."
         </p>
       </div>
 
