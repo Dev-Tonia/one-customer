@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 import Dashboard from "../pages/Dashboard.vue";
-import Electricity from "../pages/Electricity.vue";
+import Electricity from "../pages/Electricity/Electricity.vue";
+import ElectricityForm from "../pages/Electricity/ElectricityForm.vue";
 import BuyAirtime from "../pages/BuyAirtime.vue";
 import BuyData from "../pages/BuyData.vue";
 import BuyTvSub from "../pages/BuyTvSub.vue";
@@ -15,6 +16,10 @@ const router = createRouter({
     {
       path: "/electricity",
       component: Electricity,
+    },
+    {
+      path: "/electricity/:name",
+      component: ElectricityForm,
     },
     {
       path: "/buy-airtime",
