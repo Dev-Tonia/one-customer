@@ -3,6 +3,10 @@ import { ref, computed } from "vue";
 import { useRoute } from "vue-router";
 import Card from "../../components/Card.vue";
 import Layout from "../../components/Layout.vue";
+import { useOpenNavbarStore } from "../../store/openNavbar";
+import PageTitle from "../../components/PageTitle.vue";
+
+const openSideBar = useOpenNavbarStore();
 const selectOption = ref("");
 const meterType = ref(["Prepaid", "Postpaid"]);
 const route = useRoute();
@@ -11,23 +15,25 @@ const { name } = route.params;
 const distributionName = computed(() => {
   let title = name.split(" ");
   let firstCharacter = title[0].charAt(0).toUpperCase();
-  return firstCharacter + title[0].slice(1);
+  return `Buy ${firstCharacter}${title[0].slice(1)} Token`;
 });
 </script>
 <template>
   <Layout>
-    <Card class="py-3">
-      <div class="text-center">
-        <h1 class="font-semibold text-2xl leading-7">
-          Buy {{ distributionName }} Token
-        </h1>
-        <p class="italic text-[10px] text-green-500 font-medium px-8">
-          Hassle-free bill payments at your fingertips!"
-        </p>
-      </div>
+    <Card class="pb-3 pt-8 mb-2">
+      <PageTitle
+        :title="distributionName"
+        subtitle="Hassle-free bill payments at your fingertips!"
+      />
     </Card>
     <Card class="py-5">
-      <Card class="md:w-10/12 mx-auto">
+      <Card
+        class="mx-auto"
+        :class="{
+          'md:w-10/12': openSideBar.isOpen,
+          'md:w-7/12': !openSideBar.isOpen,
+        }"
+      >
         <form action="" method="post">
           <select
             id="account_type"

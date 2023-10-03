@@ -7,6 +7,10 @@ import CustomSelectVue from "../components/CustomSelect.vue";
 
 // importing the store with list of all networkProviders
 import { useTvProviders } from "../store/tvSub";
+import { useOpenNavbarStore } from "../store/openNavbar";
+import PageTitle from "../components/PageTitle.vue";
+
+const openSideBar = useOpenNavbarStore();
 
 const providers = useTvProviders(); //from the store
 const placeholderForTvType = ref("");
@@ -122,18 +126,22 @@ const networkProvider = computed(() => {
 </script>
 <template>
   <LayoutVue>
-    <CardVue class="py-3">
-      <div class="mb-3 text-center">
+    <CardVue class="pb-3 pt-8">
+      <!-- <div class="mb-3 text-center">
         <h1 class="font-semibold text-2xl md:leading-3">
-          Purchase Your Cable subscription
+          
         </h1>
         <p class="italic text-[10px] text-green-500 font-medium">
           "Unlimited entertainment, one subscription away: Immerse yourself in
           endless entertainment."
         </p>
-      </div>
-
-      <h5 class="text-lg font-medium my-2">Choose your Cable provider</h5>
+      </div> -->
+      <PageTitle
+        title="Purchase Your Cable subscription"
+        subtitle=" Unlimited entertainment, one subscription away: Immerse yourself in
+          endless entertainment."
+      />
+      <h5 class="text-lg font-medium mb-2 mt-6">Choose your Cable provider</h5>
       <div class="grid grid-cols-2 min-[420px]:flex pt-0">
         <ProviderCardVue
           class=""
@@ -146,7 +154,13 @@ const networkProvider = computed(() => {
       </div>
     </CardVue>
     <CardVue class="py-5">
-      <CardVue class="md:w-10/12 mx-auto">
+      <CardVue
+        class="mx-auto"
+        :class="{
+          'md:w-10/12': openSideBar.isOpen,
+          'md:w-7/12': !openSideBar.isOpen,
+        }"
+      >
         <h2 class="italic text-lg md:text-xl font-semibold text-center">
           Get Your Cable Subscription
         </h2>

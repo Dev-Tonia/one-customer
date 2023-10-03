@@ -4,7 +4,7 @@ import Card from "../components/Card.vue";
 </script>
 <template>
   <Layout>
-    <Card class="py-5">
+    <Card class="py-5 mb-6">
       <h1 class="text-xl font-semibold mt-1 mb-4">
         Fund Wallet with VFD Account Number: 1029105595
       </h1>
@@ -63,7 +63,7 @@ import Card from "../components/Card.vue";
         </div>
       </Card>
     </div>
-    <Card class="py-5">
+    <Card class="py-5 mt-6">
       <div class="py-4">
         <h5 class="font-semibold text-gray-400 mb-2">Latest Transactions</h5>
       </div>

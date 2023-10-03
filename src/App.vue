@@ -7,7 +7,7 @@ const openSideBar = useOpenNavbarStore();
 </script>
 <template>
   <div class="" v-if="openSideBar.isOpen">
-    <SideBarVue class="hidden md:block" />
+    <SideBarVue class="hidden md:block w-[23%]" />
     <MobileSideBarVue class="md:hidden" />
   </div>
   <RouterView />

@@ -2,8 +2,9 @@
 import LayoutVue from "../../components/Layout.vue";
 import NetworkCard from "../../components/NetworkCard.vue";
 import CardVue from "../../components/Card.vue";
-// import { useNetworkProvider } from "../store/networkProvider";
-// const providers = useNetworkProvider();
+import { useOpenNavbarStore } from "../../store/openNavbar";
+import PageTitle from "../../components/PageTitle.vue";
+const openSideBar = useOpenNavbarStore();
 let providers = [
   {
     name: "Port-Harcourt Electricity Distribution ",
@@ -33,18 +34,20 @@ let providers = [
 </script>
 <template>
   <LayoutVue>
-    <CardVue class="py-5">
-      <h1 class="text-2xl font-bold text-center">
-        Select Your Distribution Company
-      </h1>
-      <p class="italic text-[10px] text-center text-green-500 font-medium px-8">
-        "Experience seamless power with us – where reliability meets innovation.
-      </p>
-      <p class="italic text-[10px] text-center text-green-500 font-medium px-8">
-        Pay for prepaid and postpaid bill with us today!" ⚡✨
-      </p>
+    <CardVue class="pb-5 pt-8 mb-6">
+      <PageTitle
+        title="Select Your Distribution Company"
+        subtitle="Experience seamless power with us – where reliability
+      meets innovation. Pay for prepaid and postpaid bill with us today! ⚡✨ "
+      />
     </CardVue>
-    <div class="grid md:grid-cols-2 gap-1">
+    <div
+      class="grid gap-4"
+      :class="{
+        'md:grid-cols-2': openSideBar.isOpen,
+        'md:grid-cols-3': !openSideBar.isOpen,
+      }"
+    >
       <div class="" v-for="provider in providers">
         <RouterLink :to="`/electricity/${provider.name}`">
           <NetworkCard

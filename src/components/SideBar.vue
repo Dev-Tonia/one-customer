@@ -18,7 +18,7 @@ const NavItems = ref([
 ]);
 </script>
 <template>
-  <nav class="w-1/3 bg-primary text-white fixed min-h-full">
+  <nav class=" bg-primary text-white fixed min-h-full">
     <h1 class="text-lg py-[1.15rem] px-6 font-semibold">Easy Pay</h1>
     <ul>
       <p class="pt-6 px-6 pb-1 text-xs text-gray-200">Bill Payments</p>

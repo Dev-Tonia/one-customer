@@ -29,13 +29,17 @@ import LayoutVue from "../components/Layout.vue";
 import ProviderCardVue from "../components/ProviderCard.vue";
 import CardVue from "../components/Card.vue";
 import CustomSelectVue from "../components/CustomSelect.vue";
+import PageTitle from "../components/PageTitle.vue";
 
 // importing the store with list of all networkProviders
 import { useNetworkProvider } from "../store/networkProvider";
 import { useBuyData } from "../store/buyData";
+import { useOpenNavbarStore } from "../store/openNavbar";
 
 // declaring all the state
 const providers = useNetworkProvider(); //from the store
+const openSideBar = useOpenNavbarStore();
+
 const placeholderForNumber = ref("");
 const placeholderForVtu = ref("");
 const activeTab = ref("");
@@ -138,15 +142,20 @@ const networkProvider = computed(() => {
 </script>
 <template>
   <LayoutVue>
-    <CardVue class="py-3">
-      <div class="mb-3 text-center">
-        <h1 class="font-semibold text-2xl md:leading-3">Purchase Your Data</h1>
+    <CardVue class="pb-3 pt-8">
+      <!-- <div class="mb-3 text-center">
+        <h1 class="font-semibold text-2xl md:leading-5">Purchase Your Data</h1>
         <p class="italic text-[10px] text-green-500 font-medium">
-          ...Get Instant Data Top up. Never be out of data again..
+          "Uninterrupted: Instant Data Boost!"
         </p>
-      </div>
-
-      <h5 class="text-lg font-medium my-2">Choose your network provider</h5>
+      </div> -->
+      <PageTitle
+        title="Purchase Your Data"
+        subtitle="Uninterrupted: Instant Data Boost!"
+      />
+      <h5 class="text-lg font-medium mb-2 mt-6">
+        Choose your network provider
+      </h5>
       <div class="grid grid-cols-2 min-[420px]:flex pt-0">
         <ProviderCardVue
           class=""
@@ -159,17 +168,21 @@ const networkProvider = computed(() => {
       </div>
     </CardVue>
     <CardVue class="py-5">
-      <CardVue class="md:w-10/12 mx-auto">
-        <h2 class="italic text-lg md:text-xl font-semibold text-center">
-          Pay for Your Data bundle Securely
-        </h2>
+      <CardVue
+        class="mx-auto"
+        :class="{
+          'md:w-10/12': openSideBar.isOpen,
+          'md:w-7/12': !openSideBar.isOpen,
+        }"
+      >
         <form action="" method="post">
           <input
-          required
+            required
             type="text"
             :placeholder="placeholderForNumber || 'Enter Phone Number'"
           />
-          <input required
+          <input
+            required
             type="text"
             disabled
             :placeholder="placeholderForVtu || ' VTU'"
@@ -188,7 +201,7 @@ const networkProvider = computed(() => {
           >
             <span>&#8358;</span>
             <input
-            required
+              required
               v-model="dataOption.selectOption.amount"
               disabled
               type="Number"

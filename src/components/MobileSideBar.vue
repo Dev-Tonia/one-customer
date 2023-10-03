@@ -19,7 +19,7 @@ router.afterEach(() => {
 </script>
 <template>
   <div class="overlay" v-if="showOverlay" @click="closeOverLay">
-    <SideBarVue class="w-2/4 max-[460px]:w-3/4" />
+    <SideBarVue class="w-3/4 min-[450px]:w-2/4" />
   </div>
 </template>
 <style scoped>

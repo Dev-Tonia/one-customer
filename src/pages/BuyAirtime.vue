@@ -1,38 +1,14 @@
-<!-- <script setup>
-
-import LayoutVue from "../components/Layout.vue";
-import NetworkCard from "../components/NetworkCard.vue";
-import CardVue from "../components/Card.vue";
-import { useNetworkProvider } from "../store/networkProvider";
-const providers = useNetworkProvider();
-</script>
-<template>
-  <LayoutVue>
-    <CardVue class=" py-5">
-      <h1 class="text-2xl font-bold text-center">
-        Select Your Network Provider
-      </h1>
-    </CardVue>
-    <div class="grid grid-cols-2 lg:grid-cols-4 gap-5">
-      <NetworkCard
-        v-for="provider in providers.providers"
-        :provider="provider"
-        :key="provider.name"
-        class="transform transition duration-500 hover:scale-[1.2]"
-      />
-    </div>
-  </LayoutVue>
-</template>
-<style></style> -->
-
 <script setup>
 import { ref } from "vue";
 import LayoutVue from "../components/Layout.vue";
 import ProviderCardVue from "../components/ProviderCard.vue";
 import CardVue from "../components/Card.vue";
+import PageTitle from "../components/PageTitle.vue";
 // importing the store with list of all networkProviders
 import { useNetworkProvider } from "../store/networkProvider";
+import { useOpenNavbarStore } from "../store/openNavbar";
 
+const openSideBar = useOpenNavbarStore();
 const providers = useNetworkProvider(); //from the store
 const placeholderForNumber = ref("");
 const placeholderForVtu = ref("");
@@ -46,15 +22,12 @@ function selectTab(tab) {
 </script>
 <template>
   <LayoutVue>
-    <CardVue class="py-3">
-      <div class="mb-3 text-center">
-        <h1 class="font-semibold text-2xl md:leading-3">
-          Purchase Your Airtime
-        </h1>
-        <p class="italic text-[10px] text-green-500 font-medium">
-          ...Get instant Airtime Top up. Never be out of airtime again..
-        </p>
-      </div>
+    <CardVue class="pb-3 pt-8">
+      <PageTitle
+        title=" Purchase Your Airtime"
+        subtitle="Elevate: Instant
+      Airtime Reload!"
+      />
 
       <h5 class="text-lg font-medium my-2">Choose your network provider</h5>
       <div class="grid grid-cols-2 min-[420px]:flex pt-0">
@@ -69,10 +42,13 @@ function selectTab(tab) {
       </div>
     </CardVue>
     <CardVue class="py-5">
-      <CardVue class="md:w-10/12 mx-auto">
-        <h2 class="italic text-lg md:text-xl font-semibold text-center">
-          Pay for Your Airtime VTU Securely
-        </h2>
+      <CardVue
+        class="mx-auto"
+        :class="{
+          'md:w-10/12': openSideBar.isOpen,
+          'md:w-7/12': !openSideBar.isOpen,
+        }"
+      >
         <form action="" method="post">
           <input
             type="text"

@@ -3,7 +3,7 @@ import CardVue from "./Card.vue";
 const { provider } = defineProps(["provider"]);
 </script>
 <template>
-  <div>
+  <div class="">
     <CardVue class="py-2">
       <a href="">
         <div class="flex items-center gap-2">
