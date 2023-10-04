@@ -5,6 +5,7 @@ import ElectricityForm from "../pages/Electricity/ElectricityForm.vue";
 import BuyAirtime from "../pages/BuyAirtime.vue";
 import BuyData from "../pages/BuyData.vue";
 import BuyTvSub from "../pages/BuyTvSub.vue";
+import OrderSummary from "../pages/OrderSummary.vue";
 
 const router = createRouter({
   history: createWebHistory(),
@@ -32,6 +33,10 @@ const router = createRouter({
     {
       path: "/buy-tv-sub",
       component: BuyTvSub,
+    },
+    {
+      path: "/order-summary",
+      component: OrderSummary,
     },
   ],
 });

@@ -1,22 +1,21 @@
 <script setup>
 import { ref, computed } from "vue";
-import LayoutVue from "../components/Layout.vue";
 import ProviderCardVue from "../components/ProviderCard.vue";
 import CardVue from "../components/Card.vue";
 import CustomSelectVue from "../components/CustomSelect.vue";
+import Button from "../components/Button.vue";
+import PageTitle from "../components/PageTitle.vue";
 
 // importing the store with list of all networkProviders
 import { useTvProviders } from "../store/tvSub";
 import { useOpenNavbarStore } from "../store/openNavbar";
-import PageTitle from "../components/PageTitle.vue";
-
+import { useRouter } from "vue-router";
+const router = useRouter();
 const openSideBar = useOpenNavbarStore();
-
 const providers = useTvProviders(); //from the store
 const placeholderForTvType = ref("");
-// const placeholderForVtu = ref("");
-
 const activeTab = ref("");
+
 function selectTab(tab) {
   activeTab.value = activeTab.value === tab ? "" : tab;
   switch (activeTab.value) {
@@ -125,22 +124,19 @@ const networkProvider = computed(() => {
 });
 </script>
 <template>
-  <LayoutVue>
-    <CardVue class="pb-3 pt-8">
-      <!-- <div class="mb-3 text-center">
-        <h1 class="font-semibold text-2xl md:leading-3">
-          
-        </h1>
-        <p class="italic text-[10px] text-green-500 font-medium">
-          "Unlimited entertainment, one subscription away: Immerse yourself in
+  <CardVue class="pb-3 pt-8">
+    <PageTitle
+      title="Purchase Your Cable subscription"
+      subtitle=" Unlimited entertainment, one subscription away: Immerse yourself in
           endless entertainment."
-        </p>
-      </div> -->
-      <PageTitle
-        title="Purchase Your Cable subscription"
-        subtitle=" Unlimited entertainment, one subscription away: Immerse yourself in
-          endless entertainment."
-      />
+    />
+    <div
+      class="mx-auto"
+      :class="{
+        'md:w-10/12': openSideBar.isOpen,
+        'md:w-6/12': !openSideBar.isOpen,
+      }"
+    >
       <h5 class="text-lg font-medium mb-2 mt-6">Choose your Cable provider</h5>
       <div class="grid grid-cols-2 min-[420px]:flex pt-0">
         <ProviderCardVue
@@ -152,60 +148,51 @@ const networkProvider = computed(() => {
           :activeTab="activeTab"
         />
       </div>
-    </CardVue>
-    <CardVue class="py-5">
-      <CardVue
-        class="mx-auto"
-        :class="{
-          'md:w-10/12': openSideBar.isOpen,
-          'md:w-7/12': !openSideBar.isOpen,
-        }"
-      >
-        <h2 class="italic text-lg md:text-xl font-semibold text-center">
-          Get Your Cable Subscription
-        </h2>
-        <form action="" method="post">
+    </div>
+  </CardVue>
+  <CardVue class="py-5">
+    <CardVue
+      class="mx-auto"
+      :class="{
+        'md:w-10/12': openSideBar.isOpen,
+        'md:w-6/12': !openSideBar.isOpen,
+      }"
+    >
+      <h2 class="italic text-lg md:text-xl font-semibold text-center">
+        Get Your Cable Subscription
+      </h2>
+      <form action="" method="post">
+        <input
+          required
+          type="text"
+          :placeholder="placeholderForTvType || 'Choose your Cable provider'"
+        />
+        <input
+          type="text"
+          disabled
+          placeholder="Customer Name"
+          class="cursor-not-allowed"
+        />
+        <div>
+          <CustomSelectVue :networkProvider="networkProvider" />
+          <p v-if="networkProvider === ''" class="text-red-500 italic text-sm">
+            Please choose your network provider
+          </p>
+        </div>
+        <div class="flex w-full px-3 bg-[#F3F5F9] rounded-lg my-4 items-center">
+          <span>&#8358;</span>
           <input
             required
-            type="text"
-            :placeholder="placeholderForTvType || 'Choose your Cable provider'"
-          />
-          <input
-            type="text"
+            type="Number"
+            placeholder=" Amount"
             disabled
-            placeholder="Customer Name"
-            class="cursor-not-allowed"
+            class="w-full bg-transparent pl-1 py-2 border-none outline-none cursor-not-allowed"
           />
-          <div>
-            <CustomSelectVue :networkProvider="networkProvider" />
-            <p
-              v-if="networkProvider === ''"
-              class="text-red-500 italic text-sm"
-            >
-              Please choose your network provider
-            </p>
-          </div>
-          <div
-            class="flex w-full px-3 bg-[#F3F5F9] rounded-lg my-4 items-center"
-          >
-            <span>&#8358;</span>
-            <input
-              required
-              type="Number"
-              placeholder=" Amount"
-              disabled
-              class="w-full bg-transparent pl-1 py-2 border-none outline-none cursor-not-allowed"
-            />
-          </div>
-          <button
-            class="bg-green-500 text-primary text-center py-2 px-3 font-bold rounded-lg hover:bg-opacity-70"
-          >
-            Confirm Payment
-          </button>
-        </form>
-      </CardVue>
+        </div>
+        <Button @click="router.push('/order-summary')" />
+      </form>
     </CardVue>
-  </LayoutVue>
+  </CardVue>
 </template>
 <style scoped>
 input[type="text"] {

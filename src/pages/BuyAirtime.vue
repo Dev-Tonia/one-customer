@@ -1,19 +1,21 @@
 <script setup>
 import { ref } from "vue";
-import LayoutVue from "../components/Layout.vue";
 import ProviderCardVue from "../components/ProviderCard.vue";
 import CardVue from "../components/Card.vue";
 import PageTitle from "../components/PageTitle.vue";
+import Button from "../components/Button.vue";
+
 // importing the store with list of all networkProviders
 import { useNetworkProvider } from "../store/networkProvider";
 import { useOpenNavbarStore } from "../store/openNavbar";
-
+import { useRouter } from "vue-router";
+const router = useRouter();
 const openSideBar = useOpenNavbarStore();
 const providers = useNetworkProvider(); //from the store
 const placeholderForNumber = ref("");
 const placeholderForVtu = ref("");
-
 const activeTab = ref("");
+
 function selectTab(tab) {
   activeTab.value = activeTab.value === tab ? "" : tab;
   placeholderForNumber.value = ` Enter ${activeTab.value} Phone Number `;
@@ -21,14 +23,20 @@ function selectTab(tab) {
 }
 </script>
 <template>
-  <LayoutVue>
-    <CardVue class="pb-3 pt-8">
-      <PageTitle
-        title=" Purchase Your Airtime"
-        subtitle="Elevate: Instant
+  <CardVue class="pb-3 pt-8">
+    <PageTitle
+      title=" Purchase Your Airtime"
+      subtitle="Elevate: Instant
       Airtime Reload!"
-      />
+    />
 
+    <div
+      class="mx-auto"
+      :class="{
+        'md:w-10/12': openSideBar.isOpen,
+        'md:w-6/12': !openSideBar.isOpen,
+      }"
+    >
       <h5 class="text-lg font-medium my-2">Choose your network provider</h5>
       <div class="grid grid-cols-2 min-[420px]:flex pt-0">
         <ProviderCardVue
@@ -40,44 +48,38 @@ function selectTab(tab) {
           :activeTab="activeTab"
         />
       </div>
-    </CardVue>
-    <CardVue class="py-5">
-      <CardVue
-        class="mx-auto"
-        :class="{
-          'md:w-10/12': openSideBar.isOpen,
-          'md:w-7/12': !openSideBar.isOpen,
-        }"
-      >
-        <form action="" method="post">
+    </div>
+  </CardVue>
+  <CardVue class="py-5">
+    <CardVue
+      class="mx-auto"
+      :class="{
+        'md:w-10/12': openSideBar.isOpen,
+        'md:w-6/12': !openSideBar.isOpen,
+      }"
+    >
+      <form action="" method="post">
+        <input
+          type="text"
+          :placeholder="placeholderForNumber || 'Enter Phone Number'"
+        />
+        <input
+          type="text"
+          disabled
+          :placeholder="placeholderForVtu || ' VTU'"
+        />
+        <div class="flex w-full px-3 bg-[#F3F5F9] rounded-lg my-4 items-center">
+          <span>&#8358;</span>
           <input
-            type="text"
-            :placeholder="placeholderForNumber || 'Enter Phone Number'"
+            type="Number"
+            placeholder=" Amount"
+            class="w-full bg-transparent pl-1 py-2 border-none outline-none"
           />
-          <input
-            type="text"
-            disabled
-            :placeholder="placeholderForVtu || ' VTU'"
-          />
-          <div
-            class="flex w-full px-3 bg-[#F3F5F9] rounded-lg my-4 items-center"
-          >
-            <span>&#8358;</span>
-            <input
-              type="Number"
-              placeholder=" Amount"
-              class="w-full bg-transparent pl-1 py-2 border-none outline-none"
-            />
-          </div>
-          <button
-            class="bg-green-500 text-primary text-center py-2 px-3 font-bold rounded-lg hover:bg-opacity-70"
-          >
-            Confirm Payment
-          </button>
-        </form>
-      </CardVue>
+        </div>
+        <Button @click="router.push('/order-summary')" />
+      </form>
     </CardVue>
-  </LayoutVue>
+  </CardVue>
 </template>
 <style scoped>
 input[type="text"] {

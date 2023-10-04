@@ -25,13 +25,16 @@ const providers = useNetworkProvider();
 
 <script setup>
 import { ref, computed } from "vue";
-import LayoutVue from "../components/Layout.vue";
+
+// Importing Components
 import ProviderCardVue from "../components/ProviderCard.vue";
 import CardVue from "../components/Card.vue";
 import CustomSelectVue from "../components/CustomSelect.vue";
 import PageTitle from "../components/PageTitle.vue";
-
-// importing the store with list of all networkProviders
+import Button from "../components/Button.vue";
+import { useRouter } from "vue-router";
+const router = useRouter();
+// importing the stores
 import { useNetworkProvider } from "../store/networkProvider";
 import { useBuyData } from "../store/buyData";
 import { useOpenNavbarStore } from "../store/openNavbar";
@@ -141,18 +144,24 @@ const networkProvider = computed(() => {
 });
 </script>
 <template>
-  <LayoutVue>
-    <CardVue class="pb-3 pt-8">
-      <!-- <div class="mb-3 text-center">
+  <CardVue class="pb-3 pt-8">
+    <!-- <div class="mb-3 text-center">
         <h1 class="font-semibold text-2xl md:leading-5">Purchase Your Data</h1>
         <p class="italic text-[10px] text-green-500 font-medium">
           "Uninterrupted: Instant Data Boost!"
         </p>
       </div> -->
-      <PageTitle
-        title="Purchase Your Data"
-        subtitle="Uninterrupted: Instant Data Boost!"
-      />
+    <PageTitle
+      title="Purchase Your Data"
+      subtitle="Uninterrupted: Instant Data Boost!"
+    />
+    <div
+      class="mx-auto"
+      :class="{
+        'md:w-10/12': openSideBar.isOpen,
+        'md:w-6/12': !openSideBar.isOpen,
+      }"
+    >
       <h5 class="text-lg font-medium mb-2 mt-6">
         Choose your network provider
       </h5>
@@ -166,58 +175,49 @@ const networkProvider = computed(() => {
           :activeTab="activeTab"
         />
       </div>
-    </CardVue>
-    <CardVue class="py-5">
-      <CardVue
-        class="mx-auto"
-        :class="{
-          'md:w-10/12': openSideBar.isOpen,
-          'md:w-7/12': !openSideBar.isOpen,
-        }"
-      >
-        <form action="" method="post">
+    </div>
+  </CardVue>
+  <CardVue class="py-5">
+    <CardVue
+      class="mx-auto"
+      :class="{
+        'md:w-10/12': openSideBar.isOpen,
+        'md:w-6/12': !openSideBar.isOpen,
+      }"
+    >
+      <form action="" method="post">
+        <input
+          required
+          type="text"
+          :placeholder="placeholderForNumber || 'Enter Phone Number'"
+        />
+        <input
+          required
+          type="text"
+          disabled
+          :placeholder="placeholderForVtu || ' VTU'"
+        />
+        <div class="">
+          <CustomSelectVue :networkProvider="networkProvider" />
+          <p v-if="networkProvider === ''" class="text-red-500 italic text-sm">
+            Please choose your network provider
+          </p>
+        </div>
+        <div class="flex w-full px-3 bg-[#F3F5F9] rounded-lg my-4 items-center">
+          <span>&#8358;</span>
           <input
             required
-            type="text"
-            :placeholder="placeholderForNumber || 'Enter Phone Number'"
-          />
-          <input
-            required
-            type="text"
+            v-model="dataOption.selectOption.amount"
             disabled
-            :placeholder="placeholderForVtu || ' VTU'"
+            type="Number"
+            placeholder=" Amount"
+            class="w-full bg-transparent pl-1 py-2 border-none outline-none cursor-not-allowed"
           />
-          <div class="">
-            <CustomSelectVue :networkProvider="networkProvider" />
-            <p
-              v-if="networkProvider === ''"
-              class="text-red-500 italic text-sm"
-            >
-              Please choose your network provider
-            </p>
-          </div>
-          <div
-            class="flex w-full px-3 bg-[#F3F5F9] rounded-lg my-4 items-center"
-          >
-            <span>&#8358;</span>
-            <input
-              required
-              v-model="dataOption.selectOption.amount"
-              disabled
-              type="Number"
-              placeholder=" Amount"
-              class="w-full bg-transparent pl-1 py-2 border-none outline-none cursor-not-allowed"
-            />
-          </div>
-          <button
-            class="bg-green-500 text-primary text-center py-2 px-3 font-bold rounded-lg hover:bg-opacity-70"
-          >
-            Confirm Payment
-          </button>
-        </form>
-      </CardVue>
+        </div>
+        <Button @click="router.push('/order-summary')" />
+      </form>
     </CardVue>
-  </LayoutVue>
+  </CardVue>
 </template>
 <style scoped>
 input[type="text"] {
