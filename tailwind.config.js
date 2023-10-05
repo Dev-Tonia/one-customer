@@ -8,7 +8,8 @@ export default {
         inter: ["Inter", "sans-serif"],
       },
       colors: {
-        primary: "#142340",
+        primary: "#01004C",
+        secondary: "#022800",
       },
       keyframes: {
         slideDownAndFade: {

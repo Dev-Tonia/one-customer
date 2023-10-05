@@ -2,7 +2,7 @@
 import { RouterLink } from "vue-router";
 import { ref } from "vue";
 const NavItems = ref([
-  { title: "Dashborad", icon: "ri-dashboard-line", routeTo: "/" },
+  { title: "Dashboard", icon: "ri-dashboard-line", routeTo: "/dashboard" },
   {
     title: "Electricity Bill",
     icon: "ri-battery-charge-line",
@@ -18,8 +18,25 @@ const NavItems = ref([
 ]);
 </script>
 <template>
-  <nav class=" bg-primary text-white fixed min-h-full">
-    <h1 class="text-lg py-[1.15rem] px-6 font-semibold">Easy Pay</h1>
+  <nav class="bg-primary text-white fixed min-h-full">
+    <div class="py-[1.15rem] px-6 flex items-center justify-between">
+      <RouterLink to="/">
+        <!-- <h1 class="text-lg  font-semibold">Easy Pay</h1> -->
+        <div class="bg-white/60 h-12 flex justify-center p-1">
+          <img
+            src="../../public/easy-pay-logo.png"
+            alt=""
+            class="bg-contain w-full"
+          />
+        </div>
+      </RouterLink>
+      <div
+        class="w-7 h-7 flex items-center justify-center rounded-full transition ease-in-out delay-150 hover:bg-green-500 hover:transition ease-in-out"
+      >
+        <i class="ri-close-fill text-4xl p-2"></i>
+      </div>
+    </div>
+
     <ul>
       <p class="pt-6 px-6 pb-1 text-xs text-gray-200">Bill Payments</p>
       <li
@@ -81,9 +98,9 @@ const NavItems = ref([
     <form action="" method="post" class="py-2 px-[26px] hover:bg-sideHover">
       <button
         type="submit"
-        class="py-2 px-6 bg-[#142340] shadow shadow-white flex items-center gap-3"
+        class="py-2 px-6 bg-green-500 shadow text-primary shadow-white flex items-center gap-3"
       >
-        <i class="ri-login-box-line text-xl text-gray-400"></i>
+        <i class="ri-login-box-line text-xl"></i>
         <span class="text-sm">Logout</span>
       </button>
     </form>
