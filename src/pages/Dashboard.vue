@@ -65,12 +65,67 @@ import Card from "../components/Card.vue";
     <div class="py-4">
       <h5 class="font-semibold text-gray-400 mb-2">Latest Transactions</h5>
     </div>
-    <div class="mt-1 mb-4 flex">
-      <h5 class="font-semibold text-gray-500 mb-2 w-1/4">Reference</h5>
-      <h5 class="font-semibold text-gray-500 mb-2 w-1/4">Type</h5>
-      <h5 class="font-semibold text-gray-500 mb-2 w-1/4">Amount</h5>
-      <h5 class="font-semibold text-gray-500 mb-2 w-1/4">Description</h5>
+    <div class="mt-1 mb-4">
+      <table class="w-full">
+        <thead>
+          <tr class="mb-5">
+            <th class="font-semibold text-gray-500 text-left">Reference</th>
+            <th class="font-semibold text-gray-500 text-left">Type</th>
+            <th class="font-semibold text-gray-500 text-left">Amount</th>
+            <th class="font-semibold text-gray-500 text-left">Description</th>
+            <th class="font-semibold text-gray-500 text-left">Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Show a message if there are no transactions, or display transaction data -->
+          <tr v-if="transactions.length === 0">
+            <td colspan="4" class="text-gray-500 w-full text-center h-32">
+              No transactions available.
+            </td>
+          </tr>
+          <tr
+            v-else
+            v-for="(transaction, index) in transactions"
+            :key="index"
+            class="mb-5"
+          >
+            <td class="text-xs py-2 font-medium">
+              {{ transaction.reference }}
+            </td>
+            <td class="text-xs py-2 font-medium">{{ transaction.type }}</td>
+            <td class="text-xs py-2 font-medium">{{ transaction.amount }}</td>
+            <td class="text-xs py-2 font-medium">
+              {{ transaction.description }}
+            </td>
+            <td class="text-xs py-2 font-medium">{{ transaction.date }}</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
     <hr />
   </Card>
 </template>
+<script>
+export default {
+  data() {
+    return {
+      transactions: [
+        {
+          reference: "TXN001",
+          type: "Sale",
+          amount: "$100.00",
+          description: "Product purchase",
+          date: "2023-10-05",
+        },
+        {
+          reference: "TXN002",
+          type: "Refund",
+          amount: "$20.00",
+          description: "Refund for canceled order",
+          date: "2023-11-15",
+        },
+      ],
+    };
+  },
+};
+</script>
