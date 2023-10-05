@@ -16,7 +16,7 @@ const openSideBar = useOpenNavbarStore();
           </div>
         </nav>
       </header>
-      <main class="bg-[#F3F5F9] py-5 px-6">
+      <main class="bg-[#F3F5F9]">
         <slot>Easy Pay </slot>
       </main>
       <footer class="bg-white py-3 px-5">

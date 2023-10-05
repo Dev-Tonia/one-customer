@@ -18,8 +18,8 @@ const NavItems = ref([
 ]);
 </script>
 <template>
-  <nav class="bg-primary text-white fixed min-h-full">
-    <div class="py-[1.15rem] px-6 md:flex md:items-center md:justify-between">
+  <nav class="bg-primary text-white fixed min-h-full overflow-y-scroll">
+    <div class="py-[1.15rem] px-6 flex items-center justify-between">
       <RouterLink to="/">
         <!-- <h1 class="text-lg  font-semibold">Easy Pay</h1> -->
         <div class="bg-white/60 h-12 flex justify-center p-1">

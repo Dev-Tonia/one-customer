@@ -38,6 +38,7 @@ const router = useRouter();
 import { useNetworkProvider } from "../store/networkProvider";
 import { useBuyData } from "../store/buyData";
 import { useOpenNavbarStore } from "../store/openNavbar";
+import Layout from "../components/Layout.vue";
 
 // declaring all the state
 const providers = useNetworkProvider(); //from the store
@@ -144,80 +145,89 @@ const networkProvider = computed(() => {
 });
 </script>
 <template>
-  <CardVue class="pb-3 pt-8">
-    <!-- <div class="mb-3 text-center">
+  <Layout>
+    <div class="py-5 px-6">
+      <CardVue class="pb-3 pt-8">
+        <!-- <div class="mb-3 text-center">
         <h1 class="font-semibold text-2xl md:leading-5">Purchase Your Data</h1>
         <p class="italic text-[10px] text-green-500 font-medium">
           "Uninterrupted: Instant Data Boost!"
         </p>
       </div> -->
-    <PageTitle
-      title="Purchase Your Data"
-      subtitle="Uninterrupted: Instant Data Boost!"
-    />
-    <div
-      class="mx-auto"
-      :class="{
-        'md:w-10/12': openSideBar.isOpen,
-        'md:w-6/12': !openSideBar.isOpen,
-      }"
-    >
-      <h5 class="text-lg font-medium mb-2 mt-6">
-        Choose your network provider
-      </h5>
-      <div class="grid grid-cols-2 min-[420px]:flex pt-0">
-        <ProviderCardVue
-          class=""
-          v-for="provider in providers.providers"
-          :provider="provider"
-          :key="provider.name"
-          @click="selectTab(provider.name)"
-          :activeTab="activeTab"
+        <PageTitle
+          title="Purchase Your Data"
+          subtitle="Uninterrupted: Instant Data Boost!"
         />
-      </div>
+        <div
+          class="mx-auto"
+          :class="{
+            'md:w-10/12': openSideBar.isOpen,
+            'md:w-6/12': !openSideBar.isOpen,
+          }"
+        >
+          <h5 class="text-lg font-medium mb-2 mt-6">
+            Choose your network provider
+          </h5>
+          <div class="grid grid-cols-2 min-[420px]:flex pt-0">
+            <ProviderCardVue
+              class=""
+              v-for="provider in providers.providers"
+              :provider="provider"
+              :key="provider.name"
+              @click="selectTab(provider.name)"
+              :activeTab="activeTab"
+            />
+          </div>
+        </div>
+      </CardVue>
+      <CardVue class="py-5">
+        <CardVue
+          class="mx-auto"
+          :class="{
+            'md:w-10/12': openSideBar.isOpen,
+            'md:w-6/12': !openSideBar.isOpen,
+          }"
+        >
+          <form action="" method="post">
+            <input
+              required
+              type="text"
+              :placeholder="placeholderForNumber || 'Enter Phone Number'"
+            />
+            <input
+              required
+              type="text"
+              disabled
+              :placeholder="placeholderForVtu || ' VTU'"
+            />
+            <div class="">
+              <CustomSelectVue :networkProvider="networkProvider" />
+              <p
+                v-if="networkProvider === ''"
+                class="text-red-500 italic text-sm"
+              >
+                Please choose your network provider
+              </p>
+            </div>
+            <div
+              class="flex w-full px-3 bg-[#F3F5F9] rounded-lg my-4 items-center"
+            >
+              <span>&#8358;</span>
+              <input
+                required
+                v-model="dataOption.selectOption.amount"
+                disabled
+                type="Number"
+                placeholder=" Amount"
+                class="w-full bg-transparent pl-1 py-2 border-none outline-none cursor-not-allowed"
+              />
+            </div>
+            <Button @click="router.push('/order-summary')" />
+          </form>
+        </CardVue>
+      </CardVue>
     </div>
-  </CardVue>
-  <CardVue class="py-5">
-    <CardVue
-      class="mx-auto"
-      :class="{
-        'md:w-10/12': openSideBar.isOpen,
-        'md:w-6/12': !openSideBar.isOpen,
-      }"
-    >
-      <form action="" method="post">
-        <input
-          required
-          type="text"
-          :placeholder="placeholderForNumber || 'Enter Phone Number'"
-        />
-        <input
-          required
-          type="text"
-          disabled
-          :placeholder="placeholderForVtu || ' VTU'"
-        />
-        <div class="">
-          <CustomSelectVue :networkProvider="networkProvider" />
-          <p v-if="networkProvider === ''" class="text-red-500 italic text-sm">
-            Please choose your network provider
-          </p>
-        </div>
-        <div class="flex w-full px-3 bg-[#F3F5F9] rounded-lg my-4 items-center">
-          <span>&#8358;</span>
-          <input
-            required
-            v-model="dataOption.selectOption.amount"
-            disabled
-            type="Number"
-            placeholder=" Amount"
-            class="w-full bg-transparent pl-1 py-2 border-none outline-none cursor-not-allowed"
-          />
-        </div>
-        <Button @click="router.push('/order-summary')" />
-      </form>
-    </CardVue>
-  </CardVue>
+  </Layout>
 </template>
 <style scoped>
 input[type="text"] {
