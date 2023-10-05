@@ -19,15 +19,37 @@ const openSideBar = useOpenNavbarStore();
       <main class="bg-[#F3F5F9] py-5 sm:px-6 px-3">
         <slot>Easy Pay </slot>
       </main>
+      <!-- Whatsapp icon with tailwind pulse animation at the bottom right corner with fixed position -->
+      <div class="fixed bottom-5 right-5 z-30 flex justify-center items-center">
+        <a
+          href="https://api.whatsapp.com/send?phone=2349087610511"
+          target="_blank"
+          class="w-16 h-16 rounded-full bg-[#25D366] text-white flex justify-center items-center hover:scale-110 transition duration-200 cursor-pointer text-3xl"
+        >
+          <i class="ri-whatsapp-line"></i>
+        </a>
+      </div>
       <footer class="bg-white px-4 sm:px-10">
-        <div class="footer__content py-10 grid grid-cols-5 gap-10">
+        <div
+          class="footer__content py-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-10"
+        >
           <div class="logo__social--section col-span-2">
             <img src="/logo-full.png" alt="Logo footer" width="140" />
-            <!-- email -->
-            <div class="email mt-3">
+            <!-- phone -->
+            <div class="phone mt-4">
               <p class="text-sm">
-                <a href="mailto:" class="hover:underline font-semibold"
-                  >l9yQ8@example.com</a
+                <a href="tel:+2349087610511" class="underline text-sm"
+                  >+234 908 761 0511</a
+                >
+              </p>
+            </div>
+            <!-- email -->
+            <div class="email mt-2">
+              <p class="text-sm">
+                <a
+                  href="mailto:complaints@easypaybills.ng"
+                  class="underline text-sm"
+                  >complaints@easypaybills.ng</a
                 >
               </p>
             </div>
