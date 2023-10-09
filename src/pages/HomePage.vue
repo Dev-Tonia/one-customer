@@ -1,16 +1,17 @@
 <script setup>
 import Button from "../components/Button.vue";
 import Layout from "../components/Layout.vue";
+import PageTitle from "../components/PageTitle.vue";
 let date = Date.now();
 console.log(date);
 </script>
 <template>
-  <Layout class="bg-opacity-80">
+  <Layout class="bg-opacity-80 text-[#161617]">
     <div class="hero-sec"></div>
     <section class="">
       <!-- <div class="absolute top-0 left-0 right-0 bottom-0 bg-gray-500/50"> -->
       <div
-        class="text-[#161617] mb-28 mt-32 px-6 sm:w-10/12 mx-auto text-center h-full flex flex-col justify-center"
+        class="mb-28 mt-32 px-6 sm:w-10/12 mx-auto text-center h-full flex flex-col justify-center"
       >
         <div class="mb-8">
           <!-- <h1 class="text-3xl md:text-5xl font-bold mb-2">
@@ -92,11 +93,25 @@ console.log(date);
         </div>
       </div>
     </section>
-    <section>
-      <div class="text-center mb-8">
-        <h2 class="text-3xl font-semibold before:mr-1 after:ml-1">
-          EasyPayBills on mobile
-        </h2>
+    <section class="px-6 py-28">
+      <div class="sm:flex flex-row-reverse items-center justify-center">
+        <div class="mb-6 sm:mb-0">
+          <img src="/mobile-phone.avif" alt="" />
+        </div>
+        <div class="mb-8">
+          <PageTitle
+            title="EasyPayBills Is Available On Mobile "
+            subtitle=" Get more Done using your mobile device"
+          />
+          <p class="my-8 text-xl">
+            Get started by downloading the EasyPayBills App on Google Play
+          </p>
+          <a href="https://play.google.com/" target="_blank" class="">
+            <div class="overflow-hidden">
+              <img src="/Googleapp.png" alt="" />
+            </div>
+          </a>
+        </div>
       </div>
     </section>
   </Layout>
