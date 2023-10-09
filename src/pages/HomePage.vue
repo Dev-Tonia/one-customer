@@ -35,7 +35,7 @@ console.log(date);
       </div>
       <!-- </div> -->
     </section>
-    <section class="services bg-[#F2F2F2] px-6 pb-28 pt-32">
+    <section class="services bg-green-500/[3%] px-6 pb-28 pt-32">
       <div class="text-center mb-8">
         <h2 class="text-3xl font-semibold before:mr-1 after:ml-1">
           What We Offer
@@ -111,6 +111,51 @@ console.log(date);
               <img src="/Googleapp.png" alt="" />
             </div>
           </a>
+        </div>
+      </div>
+    </section>
+    <section class="px-6 py-28 bg-primary/[3%]">
+      <h2 class="text-3xl font-semibold before:mr-1 after:ml-1">Why Us</h2>
+      <div class="sm:flex flex-row-reverse items-center justify-center">
+        <div class="mb-6 sm:mb-0">
+          <img src="/support-img-preview.png" alt="" class="w-full" />
+        </div>
+        <div class="mb-8 sm:w-1/2">
+          <div class="mb-6 flex gap-1">
+            <i class="ri-customer-service-2-fill text-2xl text-green-500"></i>
+            <div>
+              <h3 class="text-xl font-medium">Professional Support!</h3>
+              <p>
+                You Are Why We Are Here...Thats Why3We Are Bent On Giving YOU
+                The Best Of Experiences. Our Support System Is Available 24/7 To
+                Assist YOU With Anything. Just Reach out..
+              </p>
+            </div>
+          </div>
+          <div class="mb-6 flex gap-1">
+            <i class="ri-radio-button-line text-3xl text-green-500"></i>
+            <div>
+              <h3 class="text-xl font-medium">Convince is an art</h3>
+              <p>
+                Simplify your bill payments effortlessly! With just a few
+                clicks, you initiate the process, and we take care of the rest
+                for you, ensuring a hassle-free experience.
+              </p>
+            </div>
+          </div>
+          <div class="mb-6 flex gap-1">
+            <i class="ri-file-shield-2-fill text-3xl text-green-500"></i>
+            <div>
+              <h3 class="text-xl font-medium">
+                Payment is protected and secure.
+              </h3>
+              <p>
+                Enjoy fast and utterly secure transactions on EasyPayBills.
+                Experience seamless payments without any interruptions, whether
+                you prefer using your wallet, bank transfer, or card.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
