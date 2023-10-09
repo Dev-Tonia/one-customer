@@ -34,7 +34,7 @@ console.log(date);
       </div>
       <!-- </div> -->
     </section>
-    <section class="services bg-[#F2F2F2] pt-14 pb-5 px-6">
+    <section class="services bg-[#F2F2F2] px-6 pb-28 pt-32">
       <div class="text-center mb-8">
         <h2 class="text-3xl font-semibold before:mr-1 after:ml-1">
           What We Offer
@@ -49,10 +49,10 @@ console.log(date);
 
       <div class="grid grid-cols-2 md:grid-cols-4 gap-5 service-item">
         <div
-          class="p-3 bg-white overflow-hidden rounded-md drop-shadow-2xl hover:bg-green-500/70 hover:text-white"
+          class="service-card px-3 py-10 bg-white border-2 flex justify-center items-center flex-col rounded-md drop-shadow-2xl transition duration-[2000ms] ease-in-out hover:bg-primary hover:text-white hover:border-green-500"
         >
           <div
-            class="h-12 w-12 rounded-full border flex justify-center items-center"
+            class="icon-card h-12 w-12 rounded-full border-2 flex justify-center items-center"
           >
             <i class="ri-battery-charge-line text-4xl"></i>
           </div>
@@ -60,7 +60,7 @@ console.log(date);
         </div>
 
         <div
-          class="h-40 p-3 bg-white overflow-hidden rounded-md drop-shadow-2xl"
+          class="px-3 py-10 bg-white border-2 flex justify-center items-center flex-col rounded-md drop-shadow-2xl transition duration-[2000ms] ease-in-out hover:bg-primary hover:text-white hover:border-green-500"
         >
           <div
             class="h-12 w-12 rounded-full border flex justify-center items-center"
@@ -71,28 +71,24 @@ console.log(date);
         </div>
 
         <div
-          class="h-40 p-3 bg-white overflow-hidden rounded-md drop-shadow-2xl"
+          class="px-3 py-10 bg-white border-2 flex justify-center items-center flex-col rounded-md drop-shadow-2xl transition duration-[2000ms] ease-in-out hover:bg-primary hover:text-white hover:border-green-500"
         >
           <div
             class="h-12 w-12 rounded-full border flex justify-center items-center"
           >
             <i class="ri-global-line text-4xl"></i>
           </div>
-          <h3 class="mt-3 text-lg font-semibold italic">
-            Mobile Data Subscription
-          </h3>
+          <h3 class="mt-3 text-lg font-semibold italic">Mobile Data</h3>
         </div>
         <div
-          class="h-40 p-3 bg-white overflow-hidden rounded-md drop-shadow-2xl"
+          class="px-3 py-10 bg-white flex justify-center items-center flex-col border-2 rounded-md drop-shadow-2xl transition duration-[2000ms] ease-in-out hover:bg-primary hover:text-white hover:border-green-500"
         >
           <div
             class="h-12 w-12 rounded-full border flex justify-center items-center"
           >
             <i class="ri-tv-line text-4xl"></i>
           </div>
-          <h3 class="mt-3 text-lg font-semibold italic">
-            Cable Tv subscription
-          </h3>
+          <h3 class="mt-3 text-lg font-semibold italic">Cable Tv</h3>
         </div>
       </div>
     </section>
