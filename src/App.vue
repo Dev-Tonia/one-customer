@@ -11,7 +11,5 @@ const openSideBar = useOpenNavbarStore();
     <SideBarVue class="hidden md:block w-[23%]" />
     <MobileSideBarVue class="md:hidden" />
   </div>
-  <Layout>
-    <RouterView />
-  </Layout>
+  <RouterView />
 </template>
