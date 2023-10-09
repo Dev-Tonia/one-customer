@@ -34,32 +34,34 @@ let providers = [
 </script>
 <template>
   <Layout>
-    <div class="py-5 px-6">
-      <CardVue class="pb-5 pt-8 mb-6">
-        <PageTitle
-          title="Select Your Distribution Company"
-          subtitle="Experience seamless power with us – where reliability
+   
+      <div class="py-5 px-6 bg-[#F3F5F9]">
+        <CardVue class="pb-5 pt-8 mb-6">
+          <PageTitle
+            title="Select Your Distribution Company"
+            subtitle="Experience seamless power with us – where reliability
       meets innovation. Pay for prepaid and postpaid bill with us today! ⚡✨ "
-        />
-      </CardVue>
-      <div
-        class="grid gap-4"
-        :class="{
-          'md:grid-cols-2': openSideBar.isOpen,
-          'md:grid-cols-3': !openSideBar.isOpen,
-        }"
-      >
-        <div class="" v-for="provider in providers">
-          <RouterLink :to="`/electricity/${provider.name}`">
-            <NetworkCard
-              :provider="provider"
-              :key="provider.name"
-              class="transform transition duration-500 hover:scale-[1.05]"
-            />
-          </RouterLink>
+          />
+        </CardVue>
+        <div
+          class="grid gap-4"
+          :class="{
+            'md:grid-cols-2': openSideBar.isOpen,
+            'md:grid-cols-3': !openSideBar.isOpen,
+          }"
+        >
+          <div class="" v-for="provider in providers">
+            <RouterLink :to="`/electricity/${provider.name}`">
+              <NetworkCard
+                :provider="provider"
+                :key="provider.name"
+                class="transform transition duration-500 hover:scale-[1.05]"
+              />
+            </RouterLink>
+          </div>
         </div>
       </div>
-    </div>
+ 
   </Layout>
 </template>
 <style></style>

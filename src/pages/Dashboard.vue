@@ -21,7 +21,7 @@ const transactions = ref([
 </script>
 <template>
   <Layout>
-    <div class="py-5 px-6">
+    <div class="py-5 px-6 bg-[#F3F5F9]">
       <Card class="py-5 mb-6">
         <h1 class="text-xl font-semibold mt-1 mb-4">
           Fund Wallet with VFD Account Number: 1029105595

@@ -25,7 +25,7 @@ function selectTab(tab) {
 </script>
 <template>
   <Layout>
-    <div class="py-5 px-6">
+    <div class="bg-[#F3F5F9] py-5 px-6">
       <CardVue class="pb-3 pt-8">
         <PageTitle
           title=" Purchase Your Airtime"

@@ -22,7 +22,8 @@ const distributionName = computed(() => {
 </script>
 <template>
   <Layout>
-    <div class="py-5 px-6">
+    
+    <div class="py-5 px-6 bg-[#F3F5F9]">
       <Card class="pb-3 pt-8 mb-2">
         <PageTitle
           :title="distributionName"
@@ -72,6 +73,7 @@ const distributionName = computed(() => {
         </Card>
       </Card>
     </div>
+    
   </Layout>
 </template>
 <style scoped>

@@ -1,95 +1,94 @@
 <script setup>
 import Button from "../components/Button.vue";
 import Layout from "../components/Layout.vue";
+let date = Date.now();
+console.log(date);
 </script>
 <template>
-  <Layout class="">
-    <section
-      class="hero bg-[url('../../public/bg-background.jpg')] bg-no-repeat bg-right bg-cover h-[80vh] relative"
-    >
-      <div class="absolute top-0 left-0 right-0 bottom-0 bg-gray-500/50">
-        <div
-          class="text-white py-5 px-6 sm:w-2/4 h-full flex flex-col justify-center"
-        >
-          <div class="mb-8">
-            <h1 class="text-3xl md:text-6xl font-bold mb-2">
-              Welcome To <span class="text-primary">EasyPay</span
-              ><span class="text-green-500">Bills</span>
-            </h1>
-            <p>
-              Pay bills with ease! Just a few clicks We handle the rest for
-              YOU...
-            </p>
-            <p>
-              Streamline Your Bill Payments with Our Convenient and Reliable
-              Payment Solutions
-            </p>
-          </div>
+  <Layout class="bg-opacity-80">
+    <div class="hero-sec"></div>
+    <section class="">
+      <!-- <div class="absolute top-0 left-0 right-0 bottom-0 bg-gray-500/50"> -->
+      <div
+        class="text-[#161617] mb-28 mt-32 px-6 sm:w-10/12 mx-auto text-center h-full flex flex-col justify-center"
+      >
+        <div class="mb-8">
+          <!-- <h1 class="text-3xl md:text-5xl font-bold mb-2">
+            Welcome To <span class="title-1">EasyPay</span
+            ><span class="title-2">Bills</span>
+          </h1> -->
+          <h1 class="text-3xl md:text-5xl font-bold mb-2">
+            The <span class="title-1"> easiest</span> way to pay for your
+            <span class="title-2">utility bills</span> online.
+          </h1>
+          <p class="md:mx-12">
+            Pay bills with ease! Just a few clicks We handle the rest for YOU...
+            Streamline Your Bill Payments with Our Convenient and Reliable
+            Payment Solutions
+          </p>
+        </div>
+
+        <div class="flex justify-center">
           <Button class="w-1/2"> Get Started</Button>
         </div>
       </div>
+      <!-- </div> -->
     </section>
-    <section class="services bg-green-100/50 pt-14 pb-5 px-6">
+    <section class="services bg-[#F2F2F2] pt-14 pb-5 px-6">
       <div class="text-center mb-8">
         <h2 class="text-3xl font-semibold before:mr-1 after:ml-1">
-          Our Services
+          What We Offer
         </h2>
         <P class="md:w-8/12 mx-auto">
-          <span class="text-green-500">Easypaybills</span> Your go-to platform
-          for effortless bill payments and top-ups. Simplify your life with easy
+          <span class="title-1">Easypaybills</span> Your go-to platform for
+          effortless bill payments and top-ups. Simplify your life with easy
           electricity bill payments, TV subscriptions, and airtime/data top-ups
           - all in one place!
         </P>
       </div>
 
       <div class="grid grid-cols-2 md:grid-cols-4 gap-5 service-item">
-        <div class="">
+        <div
+          class="p-3 bg-white overflow-hidden rounded-md drop-shadow-2xl hover:bg-green-500/70 hover:text-white"
+        >
           <div
-            class="h-40 p-3 bg-white flex justify-center items-center overflow-hidden rounded-md drop-shadow-2xl"
+            class="h-12 w-12 rounded-full border flex justify-center items-center"
           >
-            <img
-              src="/electricity-bill.png"
-              alt="electricity-bill"
-              class="w-full bg-contain h-full"
-            />
+            <i class="ri-battery-charge-line text-4xl"></i>
           </div>
           <h3 class="mt-3 text-lg font-semibold italic">Electricity Bill</h3>
         </div>
-        <div>
+
+        <div
+          class="h-40 p-3 bg-white overflow-hidden rounded-md drop-shadow-2xl"
+        >
           <div
-            class="h-40 p-3 bg-white flex justify-center items-center overflow-hidden rounded-md drop-shadow-2xl"
+            class="h-12 w-12 rounded-full border flex justify-center items-center"
           >
-            <img
-              src="/smartphone_7707715.png"
-              alt="electricity-bill"
-              class="w-full bg-contain h-full"
-            />
+            <i class="ri-phone-line text-4xl"></i>
           </div>
           <h3 class="mt-3 text-lg font-semibold italic">Airtime Top up</h3>
         </div>
-        <div>
+
+        <div
+          class="h-40 p-3 bg-white overflow-hidden rounded-md drop-shadow-2xl"
+        >
           <div
-            class="h-40 p-3 bg-white flex justify-center items-center overflow-hidden rounded-md drop-shadow-2xl"
+            class="h-12 w-12 rounded-full border flex justify-center items-center"
           >
-            <img
-              src="/data.png"
-              alt="electricity-bill"
-              class="w-full bg-contain h-full"
-            />
+            <i class="ri-global-line text-4xl"></i>
           </div>
           <h3 class="mt-3 text-lg font-semibold italic">
             Mobile Data Subscription
           </h3>
         </div>
-        <div>
+        <div
+          class="h-40 p-3 bg-white overflow-hidden rounded-md drop-shadow-2xl"
+        >
           <div
-            class="h-40 p-3 bg-white flex justify-center items-center overflow-hidden rounded-md drop-shadow-2xl"
+            class="h-12 w-12 rounded-full border flex justify-center items-center"
           >
-            <img
-              src="/tv.png"
-              alt="electricity-bill"
-              class="w-full bg-contain h-full"
-            />
+            <i class="ri-tv-line text-4xl"></i>
           </div>
           <h3 class="mt-3 text-lg font-semibold italic">
             Cable Tv subscription
@@ -97,10 +96,56 @@ import Layout from "../components/Layout.vue";
         </div>
       </div>
     </section>
-    <section></section>
+    <section>
+      <div class="text-center mb-8">
+        <h2 class="text-3xl font-semibold before:mr-1 after:ml-1">
+          EasyPayBills on mobile
+        </h2>
+      </div>
+    </section>
   </Layout>
 </template>
+
 <style scoped>
+.hero-sec {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background: radial-gradient(
+      circle at 85% 33%,
+      rgba(0, 255, 235, 0.085),
+      hsla(0, 0%, 100%, 0) 25%
+    ),
+    radial-gradient(
+      circle at 12% 55%,
+      rgba(108, 99, 255, 0.1),
+      hsla(0, 0%, 100%, 0) 25%
+    );
+}
+.title-1 {
+  background: linear-gradient(30deg, #01004c, rgb(34 197 94), #01004c) 0 0 /400%
+    100%;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: move-bg 15s linear infinite;
+}
+.title-2 {
+  background: linear-gradient(30deg, rgb(34 197 94), #01004c, rgb(34 197 94)) 0
+    0 /400% 100%;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: move-bg 15s linear infinite;
+}
+@keyframes move-bg {
+  100% {
+    background-position: 400% 0;
+  }
+}
 .services h2::after,
 .services h2::before {
   @apply content-[''] w-10 h-[2px] bg-green-500 inline-block mb-2;
