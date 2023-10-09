@@ -1,16 +1,17 @@
 <script setup>
 import Button from "../components/Button.vue";
 import Layout from "../components/Layout.vue";
+import PageTitle from "../components/PageTitle.vue";
 let date = Date.now();
 console.log(date);
 </script>
 <template>
-  <Layout class="bg-opacity-80">
+  <Layout class="bg-opacity-80 text-[#161617]">
     <div class="hero-sec"></div>
     <section class="">
       <!-- <div class="absolute top-0 left-0 right-0 bottom-0 bg-gray-500/50"> -->
       <div
-        class="text-[#161617] mb-28 mt-32 px-6 sm:w-10/12 mx-auto text-center h-full flex flex-col justify-center"
+        class="mb-28 mt-32 px-6 sm:w-10/12 mx-auto text-center h-full flex flex-col justify-center"
       >
         <div class="mb-8">
           <!-- <h1 class="text-3xl md:text-5xl font-bold mb-2">
@@ -34,7 +35,7 @@ console.log(date);
       </div>
       <!-- </div> -->
     </section>
-    <section class="services bg-[#F2F2F2] pt-14 pb-5 px-6">
+    <section class="services bg-green-500/[3%] px-6 pb-28 pt-32">
       <div class="text-center mb-8">
         <h2 class="text-3xl font-semibold before:mr-1 after:ml-1">
           What We Offer
@@ -49,10 +50,10 @@ console.log(date);
 
       <div class="grid grid-cols-2 md:grid-cols-4 gap-5 service-item">
         <div
-          class="p-3 bg-white overflow-hidden rounded-md drop-shadow-2xl hover:bg-green-500/70 hover:text-white"
+          class="service-card px-3 py-10 bg-white border-2 flex justify-center items-center flex-col rounded-md drop-shadow-2xl transition duration-[2000ms] ease-in-out hover:bg-primary hover:text-white hover:border-green-500"
         >
           <div
-            class="h-12 w-12 rounded-full border flex justify-center items-center"
+            class="icon-card h-12 w-12 rounded-full border-2 flex justify-center items-center"
           >
             <i class="ri-battery-charge-line text-4xl"></i>
           </div>
@@ -60,7 +61,7 @@ console.log(date);
         </div>
 
         <div
-          class="h-40 p-3 bg-white overflow-hidden rounded-md drop-shadow-2xl"
+          class="px-3 py-10 bg-white border-2 flex justify-center items-center flex-col rounded-md drop-shadow-2xl transition duration-[2000ms] ease-in-out hover:bg-primary hover:text-white hover:border-green-500"
         >
           <div
             class="h-12 w-12 rounded-full border flex justify-center items-center"
@@ -71,36 +72,91 @@ console.log(date);
         </div>
 
         <div
-          class="h-40 p-3 bg-white overflow-hidden rounded-md drop-shadow-2xl"
+          class="px-3 py-10 bg-white border-2 flex justify-center items-center flex-col rounded-md drop-shadow-2xl transition duration-[2000ms] ease-in-out hover:bg-primary hover:text-white hover:border-green-500"
         >
           <div
             class="h-12 w-12 rounded-full border flex justify-center items-center"
           >
             <i class="ri-global-line text-4xl"></i>
           </div>
-          <h3 class="mt-3 text-lg font-semibold italic">
-            Mobile Data Subscription
-          </h3>
+          <h3 class="mt-3 text-lg font-semibold italic">Mobile Data</h3>
         </div>
         <div
-          class="h-40 p-3 bg-white overflow-hidden rounded-md drop-shadow-2xl"
+          class="px-3 py-10 bg-white flex justify-center items-center flex-col border-2 rounded-md drop-shadow-2xl transition duration-[2000ms] ease-in-out hover:bg-primary hover:text-white hover:border-green-500"
         >
           <div
             class="h-12 w-12 rounded-full border flex justify-center items-center"
           >
             <i class="ri-tv-line text-4xl"></i>
           </div>
-          <h3 class="mt-3 text-lg font-semibold italic">
-            Cable Tv subscription
-          </h3>
+          <h3 class="mt-3 text-lg font-semibold italic">Cable Tv</h3>
         </div>
       </div>
     </section>
-    <section>
-      <div class="text-center mb-8">
-        <h2 class="text-3xl font-semibold before:mr-1 after:ml-1">
-          EasyPayBills on mobile
-        </h2>
+    <section class="px-6 py-28">
+      <div class="sm:flex flex-row-reverse items-center justify-center">
+        <div class="mb-6 sm:mb-0">
+          <img src="/mobile-phone.avif" alt="" />
+        </div>
+        <div class="mb-8">
+          <PageTitle
+            title="EasyPayBills Is Available On Mobile "
+            subtitle=" Get more Done using your mobile device"
+          />
+          <p class="my-8 text-xl">
+            Get started by downloading the EasyPayBills App on Google Play
+          </p>
+          <a href="https://play.google.com/" target="_blank" class="">
+            <div class="overflow-hidden">
+              <img src="/Googleapp.png" alt="" />
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+    <section class="px-6 py-28 bg-primary/[3%]">
+      <h2 class="text-3xl font-semibold before:mr-1 after:ml-1">Why Us</h2>
+      <div class="sm:flex flex-row-reverse items-center justify-center">
+        <div class="mb-6 sm:mb-0">
+          <img src="/support-img-preview.png" alt="" class="w-full" />
+        </div>
+        <div class="mb-8 sm:w-1/2">
+          <div class="mb-6 flex gap-1">
+            <i class="ri-customer-service-2-fill text-2xl text-green-500"></i>
+            <div>
+              <h3 class="text-xl font-medium">Professional Support!</h3>
+              <p>
+                You Are Why We Are Here...Thats Why3We Are Bent On Giving YOU
+                The Best Of Experiences. Our Support System Is Available 24/7 To
+                Assist YOU With Anything. Just Reach out..
+              </p>
+            </div>
+          </div>
+          <div class="mb-6 flex gap-1">
+            <i class="ri-radio-button-line text-3xl text-green-500"></i>
+            <div>
+              <h3 class="text-xl font-medium">Convince is an art</h3>
+              <p>
+                Simplify your bill payments effortlessly! With just a few
+                clicks, you initiate the process, and we take care of the rest
+                for you, ensuring a hassle-free experience.
+              </p>
+            </div>
+          </div>
+          <div class="mb-6 flex gap-1">
+            <i class="ri-file-shield-2-fill text-3xl text-green-500"></i>
+            <div>
+              <h3 class="text-xl font-medium">
+                Payment is protected and secure.
+              </h3>
+              <p>
+                Enjoy fast and utterly secure transactions on EasyPayBills.
+                Experience seamless payments without any interruptions, whether
+                you prefer using your wallet, bank transfer, or card.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   </Layout>
