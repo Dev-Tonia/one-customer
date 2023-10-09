@@ -19,7 +19,7 @@ const NavItems = ref([
 </script>
 <template>
   <nav class="bg-primary text-white fixed min-h-full">
-    <div class="py-[1.15rem] px-6 flex items-center justify-between">
+    <div class="py-[1.15rem] px-6 md:flex md:items-center md:justify-between">
       <RouterLink to="/">
         <!-- <h1 class="text-lg  font-semibold">Easy Pay</h1> -->
         <div class="bg-white/60 h-12 flex justify-center p-1">
@@ -31,7 +31,7 @@ const NavItems = ref([
         </div>
       </RouterLink>
       <div
-        class="w-7 h-7 flex items-center justify-center rounded-full transition ease-in-out delay-150 hover:bg-green-500 hover:transition ease-in-out"
+        class="md:hidden w-7 h-7 flex items-center justify-center rounded-full transition ease-in-out delay-150 hover:bg-green-500 hover:transition ease-in-out"
       >
         <i class="ri-close-fill text-4xl p-2"></i>
       </div>
