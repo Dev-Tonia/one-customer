@@ -5,10 +5,11 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        inter: ["Inter", "sans-serif"],
+        Prompt: ["Prompt", "sans-serif"],
       },
       colors: {
-        primary: "#142340",
+        primary: "#01004C",
+        secondary: "#022800",
       },
       keyframes: {
         slideDownAndFade: {

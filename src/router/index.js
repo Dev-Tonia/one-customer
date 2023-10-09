@@ -6,12 +6,17 @@ import BuyAirtime from "../pages/BuyAirtime.vue";
 import BuyData from "../pages/BuyData.vue";
 import BuyTvSub from "../pages/BuyTvSub.vue";
 import OrderSummary from "../pages/OrderSummary.vue";
+import HomePage from "../pages/HomePage.vue";
 
 const router = createRouter({
   history: createWebHistory(),
   routes: [
     {
       path: "/",
+      component: HomePage,
+    },
+    {
+      path: "/dashboard",
       component: Dashboard,
     },
     {
