@@ -2,8 +2,6 @@
 import Button from "../components/Button.vue";
 import Layout from "../components/Layout.vue";
 import PageTitle from "../components/PageTitle.vue";
-let date = Date.now();
-console.log(date);
 </script>
 <template>
   <Layout class="bg-opacity-80 text-[#161617]">
@@ -155,6 +153,31 @@ console.log(date);
                 you prefer using your wallet, bank transfer, or card.
               </p>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="bg-black/90 px-6 py-10">
+      <div
+        class="bg-primary text-white -mt-16 sm:flex gap-2 items-center py-9 px-4"
+      >
+        <div class="sm:w-10/12">
+          <h5 class="text-2xl">
+            Building a startup or fintech, You can consume our end points
+          </h5>
+          <p class="title-2 font-bold text-2xl text-center">OR</p>
+          <p>
+            You are an entrepreneur aiming to launch or expand your business,
+            Join us as one of our agents across the country and enjoy attractive
+            incentives.
+          </p>
+        </div>
+        <div class="flex w-full justify-center">
+          <div class="">
+            <p class="text-2xl font-bold text-center mb-5 mt-6 sm:mb-0">
+              Are you All In?
+            </p>
+            <Button> Reach out to us.</Button>
           </div>
         </div>
       </div>
