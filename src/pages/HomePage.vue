@@ -8,10 +8,15 @@ import PageTitle from "../components/PageTitle.vue";
     <div class="hero-sec"></div>
     <section class="">
       <!-- <div class="absolute top-0 left-0 right-0 bottom-0 bg-gray-500/50"> -->
-      <div
-        class="mb-28 mt-32 px-6 sm:w-10/12 mx-auto text-center h-full flex flex-col justify-center"
-      >
-        <div class="mb-8">
+      <div class="mt-20 px-6 sm:flex flex-row-reverse">
+        <div class="sm:w-6/12 h-[250px] sm:h-full">
+          <img
+            src="/example1-removebg-preview.png"
+            class="w-full object-contain sm:object-cover h-full"
+            alt=""
+          />
+        </div>
+        <div class="mb-8 mt-6 sm:w-6/12">
           <!-- <h1 class="text-3xl md:text-5xl font-bold mb-2">
             Welcome To <span class="title-1">EasyPay</span
             ><span class="title-2">Bills</span>
@@ -20,15 +25,15 @@ import PageTitle from "../components/PageTitle.vue";
             The <span class="title-1"> easiest</span> way to pay for your
             <span class="title-2">utility bills</span> online.
           </h1>
-          <p class="md:mx-12">
+          <p class="">
             Pay bills with ease! Just a few clicks We handle the rest for YOU...
-            Streamline Your Bill Payments with Our Convenient and Reliable
-            Payment Solutions
+            Streamline Your electricity bill, tv subscription, airtime to up and
+            mobile data payments with Our Convenient and Reliable Payment
+            Solutions
           </p>
-        </div>
-
-        <div class="flex justify-center">
-          <Button class="w-1/2"> Get Started</Button>
+          <div class="mt-4">
+            <Button class="w-1/2"> Get Started</Button>
+          </div>
         </div>
       </div>
       <!-- </div> -->
@@ -97,10 +102,12 @@ import PageTitle from "../components/PageTitle.vue";
           <img src="/mobile-phone.avif" alt="" />
         </div>
         <div class="mb-8">
-          <PageTitle
-            title="EasyPayBills Is Available On Mobile "
+          <!-- <PageTitle
             subtitle=" Get more Done using your mobile device"
-          />
+          /> -->
+          <h3 class="font-semibold text-2xl">
+            EasyPayBills Is Available On Mobile
+          </h3>
           <p class="my-8 text-xl">
             Get started by downloading the EasyPayBills App on Google Play
           </p>
@@ -157,29 +164,29 @@ import PageTitle from "../components/PageTitle.vue";
         </div>
       </div>
     </section>
-    <section class="bg-black/90 px-6 py-10">
-      <div
-        class="bg-primary text-white -mt-20 sm:flex gap-2 items-center py-9 px-4"
-      >
-        <div class="sm:w-10/12">
-          <h5 class="text-2xl">
-            Building a startup or fintech, You can consume our end points
-          </h5>
-          <p class="title-2 font-bold text-2xl text-center">OR</p>
-          <p>
-            You are an entrepreneur aiming to launch or expand your business,
-            Join us as one of our agents across the country and enjoy attractive
-            incentives.
-          </p>
-        </div>
-        <div class="flex w-full justify-center">
-          <div class="">
-            <p class="text-2xl font-bold text-center mb-5 mt-6 sm:mb-0">
-              Are you All In?
+    <section class="bg-black/90">
+      <div class="bg-[#9178D9]/50 px-6 py-10">
+        <div class="text-white sm:flex gap-2 items-center py-9 px-4">
+          <div class="sm:w-10/12">
+            <h5 class="text-2xl">
+              Building a startup or fintech, You can consume our end points
+            </h5>
+            <p class="title-2 font-bold text-2xl text-center">OR</p>
+            <p>
+              You are an entrepreneur aiming to launch or expand your business,
+              Join us as one of our agents across the country and enjoy
+              attractive incentives.
             </p>
-            <RouterLink to="/contact-us">
-              <Button> Reach out to us.</Button>
-            </RouterLink>
+          </div>
+          <div class="flex w-full justify-center">
+            <div class="">
+              <p class="text-2xl font-bold text-center mb-5 mt-6 sm:mb-0">
+                Are you All In?
+              </p>
+              <RouterLink to="/contact-us">
+                <Button> Reach out to us.</Button>
+              </RouterLink>
+            </div>
           </div>
         </div>
       </div>

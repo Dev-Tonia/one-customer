@@ -1,4 +1,5 @@
 <script setup>
+import Button from "../components/Button.vue";
 import ContactUsIcon from "../components/ContactUsIcon.vue";
 import Layout from "../components/Layout.vue";
 </script>
@@ -13,10 +14,9 @@ import Layout from "../components/Layout.vue";
       <div class="sm:w-9/12">
         <h1 class="text-4xl font-semibold text-center mb-4">contact Us</h1>
         <p>
-          Thank you for visiting our website! We value your feedback and
-          inquiries. If you have any questions, comments, or concerns, please
-          don't hesitate to reach out to us. Our dedicated team is here to
-          assist you in any way we can.
+          We value your feedback and inquiries. If you have any questions,
+          comments, or concerns, please don't hesitate to reach out to us. Our
+          dedicated team is here to assist you in any way we can.
         </p>
       </div>
     </section>
@@ -25,21 +25,28 @@ import Layout from "../components/Layout.vue";
         <h3 class="text-xl font-bold">Let's Hear from you.</h3>
         <form action="">
           <div class="form-control mb-2">
-            <label for=" name" class="block"> Name </label>
+            <label for=" name" class="block font-medium text-lg"> Name </label>
             <input type="text" id=" name " placeholder=" Enter your Name" />
           </div>
           <div class="form-control mb-2">
-            <label for=" email" class="block"> Email </label>
+            <label for=" email" class="block font-medium text-lg">
+              Email
+            </label>
             <input type="email" id=" email " placeholder=" Enter your Email" />
           </div>
           <div class="form-control mb-2">
-            <label for=" subject" class="block"> Subject </label>
+            <label for=" subject" class="block font-medium text-lg">
+              Subject
+            </label>
             <input type="text" id=" subject " placeholder="Query header" />
           </div>
           <div class="form-control mb-2">
-            <label for=" message" class="block"> Message </label>
-            <textarea placeholder=" Enter your Name"> </textarea>
+            <label for=" message" class="block font-medium text-lg">
+              Message
+            </label>
+            <textarea rows="4" placeholder=" Message..."></textarea>
           </div>
+          <Button>Send Message </Button>
         </form>
       </div>
     </section>
@@ -49,7 +56,7 @@ import Layout from "../components/Layout.vue";
 <style scoped>
 input,
 textarea {
-  @apply block w-full py-3 px-4  bg-[#F3F5F9] rounded-lg border-2 border-green-500 outline-none;
+  @apply block w-full py-[10px] px-4  bg-[#F3F5F9] rounded-lg border-2 border-green-500 outline-none;
 }
 
 input::placeholder {
