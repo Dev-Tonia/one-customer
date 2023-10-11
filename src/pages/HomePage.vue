@@ -159,7 +159,7 @@ import PageTitle from "../components/PageTitle.vue";
     </section>
     <section class="bg-black/90 px-6 py-10">
       <div
-        class="bg-primary text-white -mt-16 sm:flex gap-2 items-center py-9 px-4"
+        class="bg-primary text-white -mt-20 sm:flex gap-2 items-center py-9 px-4"
       >
         <div class="sm:w-10/12">
           <h5 class="text-2xl">
@@ -177,7 +177,9 @@ import PageTitle from "../components/PageTitle.vue";
             <p class="text-2xl font-bold text-center mb-5 mt-6 sm:mb-0">
               Are you All In?
             </p>
-            <Button> Reach out to us.</Button>
+            <RouterLink to="/contact-us">
+              <Button> Reach out to us.</Button>
+            </RouterLink>
           </div>
         </div>
       </div>
