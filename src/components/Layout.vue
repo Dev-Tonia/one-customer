@@ -26,8 +26,10 @@ const openSideBar = useOpenNavbarStore();
             <span class="font-light">&copy;</span>
           </div>
           <div class="">
-            <a href="#" class="text-gray-400 mr-2 inline-block hover:underline"
-              >Contact</a
+            <RouterLink
+              to="/contact-us"
+              class="text-gray-400 mr-2 inline-block hover:underline"
+              >Contact</RouterLink
             >
             <a href="#" class="text-gray-400 hover:underline">Privacy</a>
           </div>
