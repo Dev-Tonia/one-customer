@@ -21,6 +21,9 @@ import Layout from "../components/Layout.vue";
       </div>
     </section>
     <section class="px-6 py-7">
+      <div class="">
+        <h2>Alternative Way To Get To Us</h2>
+      </div>
       <div class=" ">
         <h3 class="text-xl font-bold">Let's Hear from you.</h3>
         <form action="">
