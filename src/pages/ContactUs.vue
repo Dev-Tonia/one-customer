@@ -8,24 +8,63 @@ import Layout from "../components/Layout.vue";
     <section
       class="sm:flex justify-between items-center px-6 bg-primary text-white"
     >
-      <div class="w-full flex justify-center">
-        <ContactUsIcon />
+      <div class="sm:w-5/12">
+        <h1 class="text-4xl font-semibold text-center mb-4 sm:hidden">
+          contact Us
+        </h1>
+
+        <div class="w-full flex justify-center">
+          <ContactUsIcon />
+        </div>
       </div>
-      <div class="sm:w-9/12">
-        <h1 class="text-4xl font-semibold text-center mb-4">contact Us</h1>
-        <p>
+
+      <div class="sm:w-7/12">
+        <h1 class="text-4xl font-semibold text-center mb-4 hidden sm:block">
+          contact Us
+        </h1>
+        <p class="pb-7 sm:pb-0">
           We value your feedback and inquiries. If you have any questions,
           comments, or concerns, please don't hesitate to reach out to us. Our
           dedicated team is here to assist you in any way we can.
         </p>
       </div>
     </section>
-    <section class="px-6 py-7">
+    <section class="px-6 py-7 gap-3 items-center sm:flex">
       <div class="">
-        <h2>Alternative Way To Get To Us</h2>
+        <h2 class="text-2xl font-semibold mb-4">Get In Touch</h2>
+        <!-- <i class="ri-map-pin-fill"></i> -->
+        <div class="mb-5">
+          <span
+            class="inline-block bg-primary bg-opacity-10 py-2 px-3 rounded-lg"
+            ><i class="ri-mail-send-fill text-4xl text-black/80"></i
+          ></span>
+          <span>
+            <a href="mailto:complaints@easypaybills.ng">
+              complaints@easypaybills.ng</a
+            ></span
+          >
+        </div>
+        <!-- <i class="ri-smartphone-fill"></i> -->
+        <div class="mb-5">
+          <span
+            class="inline-block bg-primary bg-opacity-10 py-2 px-3 rounded-lg"
+            ><i class="ri-map-pin-fill text-4xl text-black/80"></i
+          ></span>
+          <span> 6B Peter Odili Rd, Port Harcourt, Rivers, Nigeria.</span>
+        </div>
+        <div class="mb-5 flex gap-2 item-center">
+          <span
+            class="inline-block bg-primary bg-opacity-10 py-2 px-3 rounded-lg"
+            ><i class="ri-smartphone-fill text-4xl text-black/80"></i
+          ></span>
+          <span class="flex flex-col">
+            <a href="tel:+2349087610511">+2349087610511</a>
+            <a href="tel:+2349087610379">+2349087610379</a>
+          </span>
+        </div>
       </div>
-      <div class=" ">
-        <h3 class="text-xl font-bold">Let's Hear from you.</h3>
+      <div class="sm:w-8/12">
+        <h3 class="text-2xl font-semibold">Let's Hear from you.</h3>
         <form action="">
           <div class="form-control mb-2">
             <label for=" name" class="block font-medium text-lg"> Name </label>
