@@ -1,6 +1,8 @@
 <script setup>
 import Breadcrum from "../components/Breadcrum.vue";
 import Layout from "../components/Layout.vue";
+import BecomeAgent from "../components/BecomeAgent.vue";
+
 const ourValues = [
   "Passion",
   "Reliability",
@@ -104,6 +106,7 @@ const ourValues = [
         </div>
       </div>
     </section>
+    <BecomeAgent />
   </Layout>
 </template>
 <style scoped>
