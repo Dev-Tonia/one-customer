@@ -1,7 +1,7 @@
 <script setup>
 import Button from "../components/Button.vue";
 import Layout from "../components/Layout.vue";
-import PageTitle from "../components/PageTitle.vue";
+// import PageTitle from "../components/PageTitle.vue";
 </script>
 <template>
   <Layout class="bg-opacity-80 text-[#161617]">
@@ -13,10 +13,6 @@ import PageTitle from "../components/PageTitle.vue";
           <img src="/hero-bg.png" class="w-full object-contain h-full" alt="" />
         </div>
         <div class="mb-8 mt-6 sm:w-6/12">
-          <!-- <h1 class="text-3xl md:text-5xl font-bold mb-2">
-            Welcome To <span class="title-1">EasyPay</span
-            ><span class="title-2">Bills</span>
-          </h1> -->
           <h1 class="text-3xl md:text-5xl font-bold mb-2">
             The <span class="title-1"> easiest</span> way to pay for your
             <span class="title-2">utility bills</span> online.
@@ -27,7 +23,9 @@ import PageTitle from "../components/PageTitle.vue";
             Solutions
           </p>
           <div class="mt-4">
-            <Button class="w-1/2"> Get Started</Button>
+            <RouterLink to="/about-us">
+              <Button class="w-1/2"> Get Started</Button>
+            </RouterLink>
           </div>
         </div>
       </div>
@@ -118,7 +116,11 @@ import PageTitle from "../components/PageTitle.vue";
           <p class="my-8 text-xl">
             Get started by downloading the EasyPayBills App on Google Play
           </p>
-          <a href="https://play.google.com/" target="_blank" class="">
+          <a
+            href="https://play.google.com/store/apps/details?id=com.easypay.onecustomer&pcampaignid=web_share"
+            target="_blank"
+            class=""
+          >
             <div class="overflow-hidden">
               <img src="/Googleapp.png" alt="" />
             </div>
@@ -202,24 +204,6 @@ import PageTitle from "../components/PageTitle.vue";
 </template>
 
 <style scoped>
-.hero-sec {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: -1;
-  background: radial-gradient(
-      circle at 85% 33%,
-      rgba(0, 255, 235, 0.085),
-      hsla(0, 0%, 100%, 0) 25%
-    ),
-    radial-gradient(
-      circle at 12% 55%,
-      rgba(108, 99, 255, 0.1),
-      hsla(0, 0%, 100%, 0) 25%
-    );
-}
 .title-1 {
   background: linear-gradient(30deg, #01004c, rgb(34 197 94), #01004c) 0 0 /400%
     100%;

@@ -8,6 +8,7 @@ import BuyTvSub from "../pages/BuyTvSub.vue";
 import OrderSummary from "../pages/OrderSummary.vue";
 import HomePage from "../pages/HomePage.vue";
 import ContactUs from "../pages/ContactUs.vue";
+import AboutUs from "../pages/AboutUs.vue";
 
 const router = createRouter({
   history: createWebHistory(),
@@ -15,6 +16,14 @@ const router = createRouter({
     {
       path: "/",
       component: HomePage,
+    },
+    {
+      path: "/contact-us",
+      component: ContactUs,
+    },
+    {
+      path: "/about-us",
+      component: AboutUs,
     },
     {
       path: "/dashboard",
@@ -36,10 +45,7 @@ const router = createRouter({
       path: "/buy-data",
       component: BuyData,
     },
-    {
-      path: "/contact-us",
-      component: ContactUs,
-    },
+
     {
       path: "/buy-tv-sub",
       component: BuyTvSub,
