@@ -3,19 +3,19 @@ import Button from "./Button.vue";
 </script>
 
 <template>
-  <section class="bg-black/90">
-    <div class="bg-primary/[5%] px-6 py-10">
+  <section class="bg-black/90 sm:px-20 pb-4 px-6">
+    <div class="bg-primary/[5%]">
       <div class="text-white sm:flex gap-2 items-center py-9 px-4">
         <div class="sm:w-10/12">
-          <h5 class="text-2xl">
+          <h5 class="text-xl">
             Building a startup or fintech, You can consume our end points
           </h5>
           <!-- <p class="title-2 font-bold text-2xl text-center">OR</p> -->
-          <p>
+          <h5 class="text-xl mt-8">
             You are an entrepreneur aiming to launch or expand your business,
             Join us as one of our agents across the country and enjoy attractive
             incentives.
-          </p>
+          </h5>
         </div>
         <div class="flex w-full justify-center">
           <div class="">
