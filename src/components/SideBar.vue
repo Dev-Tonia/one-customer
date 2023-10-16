@@ -6,15 +6,23 @@ const NavItems = ref([
   {
     title: "Electricity Bill",
     icon: "ri-battery-charge-line",
-    routeTo: "/electricity",
+    routeTo: "/user.electricity",
   },
   {
     title: "Buy Airtime",
     icon: "ri-phone-line text-xl",
-    routeTo: "/buy-airtime",
+    routeTo: "/user.buy-airtime",
   },
-  { title: "Buy Mobile Data", icon: "ri-global-line", routeTo: "/buy-data" },
-  { title: "Buy TV Subscription", icon: "ri-tv-line", routeTo: "/buy-tv-sub" },
+  {
+    title: "Buy Mobile Data",
+    icon: "ri-global-line",
+    routeTo: "/user.buy-data",
+  },
+  {
+    title: "Buy TV Subscription",
+    icon: "ri-tv-line",
+    routeTo: "/user.buy-tv-sub",
+  },
 ]);
 </script>
 <template>

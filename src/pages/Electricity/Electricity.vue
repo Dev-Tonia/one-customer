@@ -1,6 +1,6 @@
 <script setup>
 import NetworkCard from "../../components/NetworkCard.vue";
-import Layout from "../../components/Layout.vue";
+// import Layout from "../../components/Layout.vue";
 import CardVue from "../../components/Card.vue";
 import { useOpenNavbarStore } from "../../store/openNavbar";
 import PageTitle from "../../components/PageTitle.vue";
@@ -33,35 +33,31 @@ let providers = [
 ];
 </script>
 <template>
-  <Layout>
-   
-      <div class="py-5 px-6 bg-[#F3F5F9]">
-        <CardVue class="pb-5 pt-8 mb-6">
-          <PageTitle
-            title="Select Your Distribution Company"
-            subtitle="Experience seamless power with us – where reliability
+  <div class="py-5 px-6 bg-[#F3F5F9]">
+    <CardVue class="pb-5 pt-8 mb-6">
+      <PageTitle
+        title="Select Your Distribution Company"
+        subtitle="Experience seamless power with us – where reliability
       meets innovation. Pay for prepaid and postpaid bill with us today! ⚡✨ "
+      />
+    </CardVue>
+    <div
+      class="grid gap-4"
+      :class="{
+        'md:grid-cols-2': openSideBar.isOpen,
+        'md:grid-cols-3': !openSideBar.isOpen,
+      }"
+    >
+      <div class="" v-for="provider in providers">
+        <RouterLink :to="`/electricity/${provider.name}`">
+          <NetworkCard
+            :provider="provider"
+            :key="provider.name"
+            class="transform transition duration-500 hover:scale-[1.05]"
           />
-        </CardVue>
-        <div
-          class="grid gap-4"
-          :class="{
-            'md:grid-cols-2': openSideBar.isOpen,
-            'md:grid-cols-3': !openSideBar.isOpen,
-          }"
-        >
-          <div class="" v-for="provider in providers">
-            <RouterLink :to="`/electricity/${provider.name}`">
-              <NetworkCard
-                :provider="provider"
-                :key="provider.name"
-                class="transform transition duration-500 hover:scale-[1.05]"
-              />
-            </RouterLink>
-          </div>
-        </div>
+        </RouterLink>
       </div>
- 
-  </Layout>
+    </div>
+  </div>
 </template>
 <style></style>

@@ -1,10 +1,17 @@
 <script setup>
 import { useOpenNavbarStore } from "../store/openNavbar";
+import SideBar from "../components/SideBar.vue";
+import MobileSideBar from "../components/MobileSideBar.vue";
 const openSideBar = useOpenNavbarStore();
 </script>
 <template>
   <div :class="{ 'md:flex': openSideBar.isOpen }">
-    <div :class="{ 'md:w-[23%]': openSideBar.isOpen }"></div>
+    <div :class="{ 'md:w-[23%]': openSideBar.isOpen }">
+      <div class="" v-if="openSideBar.isOpen">
+        <SideBar class="hidden md:block w-[23%]" />
+        <MobileSideBar class="md:hidden" />
+      </div>
+    </div>
     <div :class="{ ' md:w-[77%]': openSideBar.isOpen }">
       <header class="py-3 px-5 bg-white">
         <nav class="">

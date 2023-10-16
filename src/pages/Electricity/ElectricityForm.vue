@@ -5,7 +5,7 @@ import Card from "../../components/Card.vue";
 import { useOpenNavbarStore } from "../../store/openNavbar";
 import PageTitle from "../../components/PageTitle.vue";
 import Button from "../../components/Button.vue";
-import Layout from "../../components/Layout.vue";
+// import Layout from "../../components/Layout.vue";
 
 const openSideBar = useOpenNavbarStore();
 const selectOption = ref("");
@@ -21,60 +21,56 @@ const distributionName = computed(() => {
 });
 </script>
 <template>
-  <Layout>
-    
-    <div class="py-5 px-6 bg-[#F3F5F9]">
-      <Card class="pb-3 pt-8 mb-2">
-        <PageTitle
-          :title="distributionName"
-          subtitle="Hassle-free bill payments at your fingertips!"
-        />
-      </Card>
-      <Card class="py-5">
-        <Card
-          class="mx-auto"
-          :class="{
-            'md:w-10/12': openSideBar.isOpen,
-            'md:w-6/12': !openSideBar.isOpen,
-          }"
-        >
-          <form action="" method="post">
-            <select
-              id="account_type"
-              name="account_type"
-              class="bg-[#F3F5F9] rounded-lg"
-              v-model="selectOption"
-            >
-              <option value="" disabled placeholder=" kkkkk">
-                Select Meter Type
-              </option>
-              <option v-for="meter in meterType" :key="meter" :value="meter">
-                {{ meter }}
-              </option>
-            </select>
-            <input type="text" placeholder="Enter meter number " required />
+  <div class="py-5 px-6 bg-[#F3F5F9]">
+    <Card class="pb-3 pt-8 mb-2">
+      <PageTitle
+        :title="distributionName"
+        subtitle="Hassle-free bill payments at your fingertips!"
+      />
+    </Card>
+    <Card class="py-5">
+      <Card
+        class="mx-auto"
+        :class="{
+          'md:w-10/12': openSideBar.isOpen,
+          'md:w-6/12': !openSideBar.isOpen,
+        }"
+      >
+        <form action="" method="post">
+          <select
+            id="account_type"
+            name="account_type"
+            class="bg-[#F3F5F9] rounded-lg"
+            v-model="selectOption"
+          >
+            <option value="" disabled placeholder=" kkkkk">
+              Select Meter Type
+            </option>
+            <option v-for="meter in meterType" :key="meter" :value="meter">
+              {{ meter }}
+            </option>
+          </select>
+          <input type="text" placeholder="Enter meter number " required />
 
-            <input type="text" placeholder="Enter Phone Number" required />
-            <input type="text" placeholder="Enter Email Address" />
+          <input type="text" placeholder="Enter Phone Number" required />
+          <input type="text" placeholder="Enter Email Address" />
 
-            <div
-              class="flex w-full px-3 bg-[#F3F5F9] rounded-lg my-4 items-center"
-            >
-              <span>&#8358;</span>
-              <input
-                required
-                type="Number"
-                placeholder=" Amount"
-                class="w-full bg-transparent pl-1 py-2 border-none outline-none"
-              />
-            </div>
-            <Button @click="router.push('/order-summary')" />
-          </form>
-        </Card>
+          <div
+            class="flex w-full px-3 bg-[#F3F5F9] rounded-lg my-4 items-center"
+          >
+            <span>&#8358;</span>
+            <input
+              required
+              type="Number"
+              placeholder=" Amount"
+              class="w-full bg-transparent pl-1 py-2 border-none outline-none"
+            />
+          </div>
+          <Button @click="router.push('/order-summary')" />
+        </form>
       </Card>
-    </div>
-    
-  </Layout>
+    </Card>
+  </div>
 </template>
 <style scoped>
 input[type="text"] {
