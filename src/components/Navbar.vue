@@ -1,6 +1,7 @@
 <script setup>
 import { RouterLink } from "vue-router";
 import Button from "../components/Button.vue";
+import BillsDropDown from "./BillsDropDown.vue";
 
 const NavItems = [
   { title: "Home", routeTo: "/" },
@@ -13,28 +14,6 @@ const NavItems = [
     routeTo: "/contact-us",
   },
 ];
-/* 
-{
-    title: "Electricity Bill",
-    icon: "ri-battery-charge-line",
-    routeTo: "/user.electricity",
-  },
-  {
-    title: "Buy Airtime",
-    icon: "ri-phone-line text-xl",
-    routeTo: "/user.buy-airtime",
-  },
-  {
-    title: "Buy Mobile Data",
-    icon: "ri-global-line",
-    routeTo: "/user.buy-data",
-  },
-  {
-    title: "Buy TV Subscription",
-    icon: "ri-tv-line",
-    routeTo: "/user.buy-tv-sub",
-  },
-*/
 </script>
 <template>
   <nav
@@ -62,13 +41,19 @@ const NavItems = [
             }}</span>
           </RouterLink>
         </li>
+        <li>
+          <!-- <DropDown /> -->
+          <BillsDropDown />
+        </li>
       </ul>
       <div class="flex space-x-4">
         <div>
           <Button class=""> Sign In</Button>
         </div>
         <div>
-          <Button> Log In</Button>
+          <router-link to="/dashboard">
+            <Button> Log In</Button>
+          </router-link>
         </div>
       </div>
     </div>
