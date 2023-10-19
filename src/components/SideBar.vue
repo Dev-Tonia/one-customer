@@ -31,9 +31,9 @@ const NavItems = ref([
       <div class="py-[1.15rem] px-6 flex items-center justify-between">
         <RouterLink to="/">
           <!-- <h1 class="text-lg  font-semibold">Easy Pay</h1> -->
-          <div class="bg-white/60 h-12 flex justify-center p-1">
+          <div class="h-12 flex justify-center p-1">
             <img
-              src="../../public/easy-pay-logo.png"
+              src="../assets/images/easypay-1-logo.png"
               alt=""
               class="bg-contain w-full"
             />
@@ -99,5 +99,9 @@ li:hover i {
 }
 li:hover span {
   @apply text-gray-400;
+}
+
+img {
+  filter: grayscale(1) invert(1);
 }
 </style>
