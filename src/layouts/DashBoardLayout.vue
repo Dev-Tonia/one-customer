@@ -2,6 +2,7 @@
 import { useOpenNavbarStore } from "../store/openNavbar";
 import SideBar from "../components/SideBar.vue";
 import MobileSideBar from "../components/MobileSideBar.vue";
+import Footer from "../components/Footer.vue";
 const openSideBar = useOpenNavbarStore();
 </script>
 <template>
@@ -26,22 +27,7 @@ const openSideBar = useOpenNavbarStore();
       <main class="">
         <slot>Easy Pay </slot>
       </main>
-      <footer class="bg-white py-3 px-5">
-        <div class="flex justify-between">
-          <div class="flex">
-            <p class="font-semibold text-gray-400">Easy Pay</p>
-            <span class="font-light">&copy;</span>
-          </div>
-          <div class="">
-            <RouterLink
-              to="/contact-us"
-              class="text-gray-400 mr-2 inline-block hover:underline"
-              >Contact</RouterLink
-            >
-            <a href="#" class="text-gray-400 hover:underline">Privacy</a>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   </div>
 </template>

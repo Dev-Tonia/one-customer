@@ -8,7 +8,7 @@ import BecomeAgent from "../components/BecomeAgent.vue";
 <template>
   <!-- <Layout class="bg-opacity-80 text-[#161617]"> -->
   <div class="hero-sec"></div>
-  <section class="pt-10">
+  <section class="">
     <!-- <div class="absolute top-0 left-0 right-0 bottom-0 bg-gray-500/50"> -->
     <div
       class="mt-10 sm:px-20 pb-20 px-6 sm:flex flex-row-reverse items-center"
@@ -18,7 +18,7 @@ import BecomeAgent from "../components/BecomeAgent.vue";
       </div>
       <div class="mb-8 mt-6 sm:w-6/12">
         <h1 class="text-3xl md:text-5xl font-bold mb-2">
-          The <span class="title-1"> easiest</span> way to pay for your
+          The <span class="title-1"> easiest</span> way to pay your
           <span class="title-2">utility bills</span> online.
         </h1>
         <p class="">

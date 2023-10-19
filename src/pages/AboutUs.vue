@@ -16,7 +16,7 @@ const ourValues = [
 </script>
 <template>
   <!-- <Layout> -->
-  <section class="hero h-[70vh] relative">
+  <section class="hero h-[60vh] relative">
     <h1
       class="text-5xl text-white font-bold text-center flex justify-center items-center h-full"
     >
