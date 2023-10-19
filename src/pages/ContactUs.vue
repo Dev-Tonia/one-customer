@@ -4,7 +4,7 @@ import ContactUsIcon from "../components/ContactUsIcon.vue";
 </script>
 <template>
   <section
-    class="sm:flex justify-between items-center px-6 pt-20 bg-primary text-white"
+    class="sm:flex justify-between items-center px-6 bg-primary text-white"
   >
     <div class="sm:w-5/12">
       <h1 class="text-4xl font-semibold text-center mb-4 sm:hidden">
