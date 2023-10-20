@@ -124,7 +124,7 @@ const networkProvider = computed(() => {
 });
 </script>
 <template>
-  <div class="py-5 px-6 bg-[#F3F5F9]">
+  <div class="py-5 wrapper bg-[#F3F5F9]">
     <CardVue class="pb-3 pt-8">
       <PageTitle
         title="Purchase Your Cable subscription"

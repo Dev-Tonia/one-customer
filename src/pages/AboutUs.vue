@@ -23,7 +23,7 @@ const ourValues = [
       About Us
     </h1>
   </section>
-  <section class="sm:px-20 pb-4 px-6 relative">
+  <section class="wrapper pb-4 relative">
     <div class="hero-sec"></div>
 
     <div class="md:flex items-center">
@@ -50,7 +50,7 @@ const ourValues = [
       </div>
     </div>
   </section>
-  <section class="sm:px-20 pb-4 px-6">
+  <section class="wrapper pb-4">
     <h2 class="mb-6 mt-9 text-2xl font-medium">Know More About us</h2>
     <div class="sm:flex gap-4">
       <div class="flex flex-col justify-center items-center px-8 py-3 border-2">

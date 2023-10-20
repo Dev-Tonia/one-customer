@@ -14,7 +14,7 @@ const openSideBar = useOpenNavbarStore();
       </div>
     </div>
     <div :class="{ ' md:w-[77%]': openSideBar.isOpen }">
-      <header class="py-3 px-5 bg-white">
+      <header class="py-3 wrapper bg-white">
         <nav class="">
           <div class="flex justify-start">
             <i
