@@ -6,7 +6,7 @@ import Button from "../components/Button.vue";
 const paymentOption = ref("Easy Pay Wallet");
 </script>
 <template>
-  <div class="py-5 px-6 bg-[#F3F5F9]">
+  <div class="py-5 wrapper bg-[#F3F5F9]">
     <Card class="pt-8 pb-3 mb-6">
       <PageTitle title="Confirm your Transaction" />
     </Card>

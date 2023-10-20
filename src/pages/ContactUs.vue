@@ -27,7 +27,7 @@ import ContactUsIcon from "../components/ContactUsIcon.vue";
       </p>
     </div>
   </section>
-  <section class="px-6 py-7 gap-3 items-center sm:flex">
+  <section class="wrapper py-7 gap-3 items-center sm:flex">
     <div class="">
       <h2 class="text-2xl font-semibold mb-4">Get In Touch</h2>
       <!-- <i class="ri-map-pin-fill"></i> -->

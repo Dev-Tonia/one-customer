@@ -21,7 +21,7 @@ const distributionName = computed(() => {
 });
 </script>
 <template>
-  <div class="py-5 px-6 bg-[#F3F5F9]">
+  <div class="py-5 wrapper bg-[#F3F5F9]">
     <Card class="pb-3 pt-8 mb-2">
       <PageTitle
         :title="distributionName"
