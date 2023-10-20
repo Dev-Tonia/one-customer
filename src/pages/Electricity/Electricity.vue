@@ -33,7 +33,7 @@ let providers = [
 ];
 </script>
 <template>
-  <div class="py-5 px-6 bg-[#F3F5F9]">
+  <div class="py-5 wrapper bg-[#F3F5F9]">
     <CardVue class="pb-5 pt-8 mb-6">
       <PageTitle
         title="Select Your Distribution Company"

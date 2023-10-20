@@ -10,9 +10,7 @@ import BecomeAgent from "../components/BecomeAgent.vue";
   <div class="hero-sec"></div>
   <section class="">
     <!-- <div class="absolute top-0 left-0 right-0 bottom-0 bg-gray-500/50"> -->
-    <div
-      class="mt-10 sm:px-20 pb-20 px-6 sm:flex flex-row-reverse items-center"
-    >
+    <div class="mt-10 wrapper py-20 pb-6 sm:flex flex-row-reverse items-center">
       <div class="sm:w-6/12 overflow-hidden h-[450px]">
         <img src="/hero-bg.png" class="w-full object-contain h-full" alt="" />
       </div>
@@ -36,7 +34,7 @@ import BecomeAgent from "../components/BecomeAgent.vue";
     <!-- </div> -->
   </section>
   <section
-    class="services bg-green-500/[3%] px-6 pb-20 pt-32 sm:px-20 flex flex-col items-center"
+    class="services bg-green-500/[3%] wrapper py-20 flex flex-col items-center"
   >
     <div class="text-center mb-8">
       <h2 class="text-3xl font-semibold before:mr-1 after:ml-1">
@@ -105,7 +103,7 @@ import BecomeAgent from "../components/BecomeAgent.vue";
       </div>
     </div>
   </section>
-  <section class="px-6 py-20 sm:px-20 pb-4">
+  <section class="wrapper py-20">
     <div class="sm:flex flex-row-reverse items-center justify-center">
       <div class="mb-6 sm:mb-0">
         <img src="/mobile-phone.avif" alt="" />
@@ -132,13 +130,15 @@ import BecomeAgent from "../components/BecomeAgent.vue";
       </div>
     </div>
   </section>
-  <section class="px-6 py-20 sm:px-20 bg-primary/[3%]">
-    <h2 class="text-3xl font-semibold before:mr-1 after:ml-1">Why Us</h2>
+  <section class="wrapper py-20 bg-primary/[3%]">
+    <h2 class="text-3xl font-semibold text-center md:hidden">Why Us</h2>
     <div class="sm:flex flex-row-reverse items-center justify-center">
       <div class="mb-6 sm:mb-0">
         <img src="/support-img-preview.png" alt="" class="w-full" />
       </div>
       <div class="mb-8 sm:w-1/2">
+        <h2 class="text-3xl font-semibold hidden md:block mb-5">Why Us</h2>
+
         <div class="mb-6 flex gap-1">
           <i class="ri-customer-service-2-fill text-2xl text-green-500"></i>
           <div>

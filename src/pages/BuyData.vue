@@ -144,14 +144,8 @@ const networkProvider = computed(() => {
 });
 </script>
 <template>
-  <div class="py-5 px-6 bg-[#F3F5F9]">
+  <div class="py-5 wrapper bg-[#F3F5F9]">
     <CardVue class="pb-3 pt-8">
-      <!-- <div class="mb-3 text-center">
-        <h1 class="font-semibold text-2xl md:leading-5">Purchase Your Data</h1>
-        <p class="italic text-[10px] text-green-500 font-medium">
-          "Uninterrupted: Instant Data Boost!"
-        </p>
-      </div> -->
       <PageTitle
         title="Purchase Your Data"
         subtitle="Uninterrupted: Instant Data Boost!"

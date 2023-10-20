@@ -23,3 +23,6 @@
       hsla(0, 0%, 100%, 0) 25%
     );
 }
+.wrapper {
+  @apply px-6  sm:px-20;
+}
