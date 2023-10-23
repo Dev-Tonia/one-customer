@@ -37,7 +37,9 @@ const NavItems = [
       class="md-lg:hidden min-[360px]:space-x-4 space-y-4 min-[360px]:space-y-0 min-[360px]:flex"
     >
       <div class="min-[360px]:w-4/12">
-        <Button class="w-full md-lg:w-fit"> Sign In</Button>
+        <RouterLink to="/sign-up">
+          <Button class="w-full md-lg:w-fit"> Sign In</Button>
+        </RouterLink>
       </div>
       <div class="min-[360px]:w-4/12">
         <router-link to="/dashboard">
@@ -47,3 +49,8 @@ const NavItems = [
     </div>
   </div>
 </template>
+<style scoped>
+.active {
+  @apply text-primary;
+}
+</style>

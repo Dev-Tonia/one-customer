@@ -6,17 +6,12 @@ import AuthLayout from "./AuthLayout.vue";
 <template>
   <AuthLayout>
     <form action="" class="bg-white pt-6 pb-12 px-10">
-      <h1 class="text-2xl font-semibold text-center mb-6">
-        Create Your Account
-      </h1>
-      <CustomInput placeholder="John Doe" type="text" class="mb-5" />
+      <h1 class="text-2xl font-semibold text-center mb-6">Welcome Back</h1>
       <CustomInput
         placeholder="johndoe@example.com"
         type="email"
         class="mb-5"
       />
-      <CustomInput placeholder="1234567890" type="tel" class="mb-5" />
-      <!-- <CustomInput placeholder="Password" type="password" class="mb-5" /> -->
       <div class="flex bg-[#F3F5F9] rounded-lg items-center mb-5 pr-2">
         <CustomInput
           type="password"
@@ -25,17 +20,22 @@ import AuthLayout from "./AuthLayout.vue";
         />
         <i class="ri-eye-line text-primary text-2xl cursor-pointer"></i>
       </div>
-      <CustomInput
-        placeholder="confirm Password"
-        type="password"
-        class="mb-5"
-      />
-
-      <Button class="w-full">Sign up</Button>
+      <div class="min-[450px]:flex justify-between mb-5">
+        <div>
+          <input type="checkbox" name="" id="remember" />
+          <label for="remember" class="ml-2 text-gray-600">Remember Me</label>
+        </div>
+        <div>
+          <RouterLink to="retrieve-password" class="text-primary font-semibold">
+            Forget Password?
+          </RouterLink>
+        </div>
+      </div>
+      <Button class="w-full">Login</Button>
       <p class="text-gray-600 mt-2">
-        Already has an account?
-        <RouterLink to="/login" class="text-primary font-semibold"
-          >Log in</RouterLink
+        Don't have an account?
+        <RouterLink to="/sign-up" class="text-primary font-semibold"
+          >Sign Up</RouterLink
         >
       </p>
     </form>

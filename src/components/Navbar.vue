@@ -5,7 +5,10 @@ import Button from "../components/Button.vue";
 import MenuItem from "./MenuItem.vue";
 import CustomInput from "./CustomInput.vue";
 const value = ref("");
-const toggleMenu = ref(false);
+const isMenuOpen = ref(true);
+const toggleMenu = () => {
+  isMenuOpen.value = !isMenuOpen.value;
+};
 </script>
 <template>
   <header class="">
@@ -46,7 +49,7 @@ const toggleMenu = ref(false);
               />
             </RouterLink>
           </div>
-          <div class="md-lg:hidden">
+          <div class="md-lg:hidden" @click="toggleMenu">
             <i class="ri-menu-2-line text-primary text-3xl"></i>
           </div>
           <div class="hidden md-lg:block">
@@ -54,7 +57,9 @@ const toggleMenu = ref(false);
           </div>
           <div class="md-lg:flex space-x-4 hidden">
             <div>
-              <Button class=""> Sign In</Button>
+              <RouterLink to="/sign-up">
+                <Button class=""> Sign In</Button>
+              </RouterLink>
             </div>
             <div>
               <router-link to="/dashboard">
@@ -63,7 +68,7 @@ const toggleMenu = ref(false);
             </div>
           </div>
         </div>
-        <div class="md-lg:hidden">
+        <div class="md-lg:hidden" :class="{ hidden: isMenuOpen }">
           <MenuItem />
         </div>
       </div>
@@ -73,8 +78,4 @@ const toggleMenu = ref(false);
   <div class="bg-transparent md-lg:bg-white mt-[136px]"></div>
 </template>
 
-<style scoped>
-.active {
-  @apply text-primary;
-}
-</style>
+<style scoped></style>
