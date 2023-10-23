@@ -10,7 +10,7 @@ import BecomeAgent from "../components/BecomeAgent.vue";
   <div class="hero-sec"></div>
   <section class="">
     <!-- <div class="absolute top-0 left-0 right-0 bottom-0 bg-gray-500/50"> -->
-    <div class="mt-10 wrapper py-20 pb-6 sm:flex flex-row-reverse items-center">
+    <div class="mt-10 wrapper pt-6 pb-10 sm:flex flex-row-reverse items-center">
       <div class="sm:w-6/12 overflow-hidden h-[450px]">
         <img src="/hero-bg.png" class="w-full object-contain h-full" alt="" />
       </div>

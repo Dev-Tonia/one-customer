@@ -24,10 +24,14 @@
       </div>
     </transition>
   </div> -->
-  <div>
+  <div class="">
     <button @click="toggleShow" class="anchor">Pay Bills</button>
     <div v-if="showMenu" class="menu">
-      <div class="menu-item" v-for="bill in bills" :key="bill.routeTo">
+      <div
+        class="menu-item left-0 right-0"
+        v-for="bill in bills"
+        :key="bill.routeTo"
+      >
         <router-link :to="bill.routeTo" @click="toggleShow">
           {{ bill.title }}
         </router-link>
