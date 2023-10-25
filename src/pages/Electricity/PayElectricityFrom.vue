@@ -1,6 +1,6 @@
 <script setup>
 import { useRouter } from "vue-router";
-import { ref, computed } from "vue";
+import { ref } from "vue";
 import Button from "../../components/Button.vue";
 import { useLayout } from "../../composable/getLayout";
 const router = useRouter();

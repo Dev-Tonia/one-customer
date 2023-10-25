@@ -2,8 +2,8 @@ import { createRouter, createWebHistory } from "vue-router";
 import Dashboard from "../pages/Dashboard.vue";
 import Electricity from "../pages/Electricity/Electricity.vue";
 import ElectricityForm from "../pages/Electricity/ElectricityForm.vue";
-import BuyAirtime from "../pages/Airtime/BuyAirtime.vue";
-import BuyData from "../pages/DataSub/BuyData.vue";
+import BuyAirtime from "../pages/BuyAirtime.vue";
+import BuyData from "../pages/BuyData.vue";
 import BuyTvSub from "../pages/BuyTvSub.vue";
 import OrderSummary from "../pages/OrderSummary.vue";
 import HomePage from "../pages/HomePage.vue";
@@ -15,6 +15,7 @@ import SignUp from "../pages/AuthPages/SignUp.vue";
 import Login from "../pages/AuthPages/Login.vue";
 import RetrievePassword from "../pages/AuthPages/RetrievePassword.vue";
 import ChangePassword from "../pages/AuthPages/ChangePassword.vue";
+import AllProduct from "../pages/productTab/AllProducts.vue";
 
 const router = createRouter({
   history: createWebHistory(),
@@ -79,6 +80,13 @@ const router = createRouter({
     {
       path: "/order-summary",
       component: OrderSummary,
+      meta: {
+        layout: MainLayout,
+      },
+    },
+    {
+      path: "/all-product",
+      component: AllProduct,
       meta: {
         layout: MainLayout,
       },

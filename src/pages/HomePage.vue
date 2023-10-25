@@ -2,6 +2,7 @@
 import Button from "../components/Button.vue";
 // import Layout from "../components/Layout.vue";
 import BecomeAgent from "../components/BecomeAgent.vue";
+import OutlineButton from "../components/OutlineButton.vue";
 
 // import PageTitle from "../components/PageTitle.vue";
 </script>
@@ -24,9 +25,15 @@ import BecomeAgent from "../components/BecomeAgent.vue";
           mobile data payments with Our Convenient and Reliable Payment
           Solutions
         </p>
-        <div class="mt-4">
-          <RouterLink to="/about-us">
-            <Button class="w-1/2"> Get Started</Button>
+        <div class="mt-4 flex gap-5">
+          <RouterLink to="/sign-up">
+            <Button class=" "> Get Started</Button>
+          </RouterLink>
+          <RouterLink to="/all-product">
+            <OutlineButton
+              class="text-primary border-green-500 hover:text-white hover:bg-green-500 hover:bg-opacity-50 hover:border-0"
+              >Pay Bills</OutlineButton
+            >
           </RouterLink>
         </div>
       </div>
