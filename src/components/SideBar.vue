@@ -1,6 +1,7 @@
 <script setup>
 import { RouterLink } from "vue-router";
 import { ref } from "vue";
+import Button from "./Button.vue";
 const NavItems = ref([
   { title: "Dashboard", icon: "ri-dashboard-line", routeTo: "/dashboard" },
   {
@@ -27,7 +28,7 @@ const NavItems = ref([
 </script>
 <template>
   <div class="fixed h-full">
-    <nav class="bg-primary h-full text-white overflow-y-scroll">
+    <nav class="bg-gray-50 h-full text-gray-900 overflow-y-scroll">
       <div class="py-[1.15rem] px-6 flex items-center justify-between">
         <RouterLink to="/">
           <!-- <h1 class="text-lg  font-semibold">Easy Pay</h1> -->
@@ -47,7 +48,7 @@ const NavItems = ref([
       </div>
 
       <ul class="">
-        <p class="pt-6 px-6 pb-1 text-xs text-gray-200">Bill Payments</p>
+        <p class="pt-6 px-6 pb-1 text-xs text-gray-800">Bill Payments</p>
         <li
           class="py-2 px-[26px] hover:bg-sideHover"
           v-for="item in NavItems"
@@ -55,18 +56,15 @@ const NavItems = ref([
         >
           <RouterLink
             :to="item.routeTo"
-            active-class=" text-white "
             class="flex items-center gap-3"
+            active-class="active"
           >
-            <i
-              class="text-xl text-gray-400 hover:text-white"
-              :class="item.icon"
-            ></i>
+            <i class="text-xl text-gray-400" :class="item.icon"></i>
             <span class="text-sm hover:text-gray-400">{{ item.title }}</span>
           </RouterLink>
         </li>
 
-        <p class="pt-6 pb-1 px-6 text-xs text-gray-200">Page</p>
+        <p class="pt-6 pb-1 px-6 text-xs text-gray-800">Page</p>
         <li class="py-2 px-[26px] hover:bg-sideHover">
           <a href="#" class="flex items-center gap-3">
             <i class="ri-user-3-line text-gray-400 text-xl"></i>
@@ -82,26 +80,32 @@ const NavItems = ref([
         </li>
       </ul>
       <form action="" method="post" class="py-2 px-[26px] hover:bg-sideHover">
-        <button
+        <Button
           type="submit"
-          class="py-2 px-6 bg-green-500 shadow text-primary shadow-white flex items-center gap-3"
+          class="py-2 px-6 shadow shadow-primary flex items-center gap-3"
         >
           <i class="ri-login-box-line text-xl"></i>
           <span class="text-sm">Logout</span>
-        </button>
+        </Button>
       </form>
     </nav>
   </div>
 </template>
 <style scoped>
 li:hover i {
-  @apply text-white;
+  @apply text-green-500;
 }
 li:hover span {
   @apply text-gray-400;
 }
-
-img {
-  filter: grayscale(1) invert(1);
+.active {
+  @apply text-primary font-bold;
 }
+.active i {
+  @apply text-green-500;
+}
+
+/* img {
+  filter: grayscale(1) invert(1);
+} */
 </style>

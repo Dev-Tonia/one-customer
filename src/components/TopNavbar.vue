@@ -1,30 +1,83 @@
 <script setup>
 import { ref } from "vue";
 import CustomInput from "./CustomInput.vue";
+import CustomModal from "../components/CustomModal.vue";
+import SocialLinks from "./SocialLinks.vue";
+import Button from "./Button.vue";
+const showOverlay = ref(false);
+
+// close link page after each link click
+function closeOverLay() {
+  showOverlay.value = !showOverlay.value;
+}
+
 const value = ref("");
 </script>
 <template>
   <div class="bg-primary wrapper py-[5px] bg-opacity-90 flex justify-between">
     <div class="flex gap-2 items-center">
-      <h4 class="font-semibold text-lg text-white">No Token?</h4>
-      <div class="flex bg-[#F3F5F9] rounded-lg items-center">
-        <CustomInput
-          v-model="value"
-          type="text"
-          placeholder="Retrieve Token"
-          class="w-full bg-transparent border-none outline-none"
-        />
-        <i
-          class="ri-search-eye-fill text-green-500 text-4xl cursor-pointer"
-        ></i>
+      <div
+        class="font-semibold text-lg text-white cursor-pointer"
+        @click="closeOverLay"
+      >
+        No Token?
+      </div>
+      <div class="flex items-center justify-center">
+        <a
+          href="#"
+          class="rounded-md font-bold text-white inline-block pt-1 px-1 hover:bg-green-500"
+        >
+          Become An Agent
+        </a>
       </div>
     </div>
 
-    <a
-      href="#"
-      class="rounded-md font-bold text-white inline-block pt-1 px-1 hover:bg-green-500"
-    >
-      Become An Agent
-    </a>
+    <div class="flex items-center gap-2">
+      <div>
+        <a
+          href="https://api.whatsapp.com/send?phone=2349087610379"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-white"
+        >
+          <i class="ri-phone-line"></i>
+          <span>09087610511</span>
+        </a>
+      </div>
+      <div>
+        <a
+          href="https://api.whatsapp.com/send?phone=2349087610379"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-white"
+        >
+          <i class="ri-whatsapp-line"></i>
+          <span>09087610379</span>
+        </a>
+      </div>
+      <SocialLinks class="gap-x-1" />
+    </div>
   </div>
+
+  <CustomModal v-if="showOverlay" :closeOverLay="closeOverLay">
+    <h1 class="text-center mb-2 text-2xl font-medium">RETRIEVE TOKEN</h1>
+    <p class="mb-6">Enter your transaction Id and your phone number below</p>
+    <div class="mb-3">
+      <CustomInput
+        v-model="value"
+        type="text"
+        placeholder="Enter Transaction Id"
+        class="w-full bg-transparent border-none outline-none"
+      />
+    </div>
+    <div class="mb-3">
+      <CustomInput
+        v-model="value"
+        type="text"
+        placeholder="Enter Phone Number"
+        class="w-full bg-transparent border-none outline-none"
+      />
+    </div>
+    <Button class="w-full">Retrieve</Button>
+  </CustomModal>
 </template>
