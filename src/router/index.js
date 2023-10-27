@@ -1,9 +1,9 @@
 import { createRouter, createWebHistory } from "vue-router";
 import Dashboard from "../pages/Dashboard.vue";
-import Electricity from "../pages/Electricity/Electricity.vue";
-import ElectricityForm from "../pages/Electricity/ElectricityForm.vue";
-import BuyAirtime from "../pages/BuyAirtime.vue";
-import BuyData from "../pages/BuyData.vue";
+import Electricity from "../pages/electricity/Electricity.vue";
+import ElectricityForm from "../pages/electricity/ElectricityForm.vue";
+import BuyAirtime from "../pages/airtime/BuyAirtime.vue";
+import BuyData from "../pages/mobileData/BuyData.vue";
 import BuyTvSub from "../pages/BuyTvSub.vue";
 import OrderSummary from "../pages/OrderSummary.vue";
 import HomePage from "../pages/HomePage.vue";

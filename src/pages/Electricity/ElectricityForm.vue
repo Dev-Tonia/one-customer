@@ -27,16 +27,12 @@ const distributionName = computed(() => {
     </Card>
     <Card class="py-5">
       <Card
-        v-if="layout === 'DashBoardLayout'"
         class="mx-auto"
         :class="{
           'md:w-10/12': openSideBar.isOpen,
-          'md:w-6/12': !openSideBar.isOpen,
+          'md:w-6/12': !openSideBar.isOpen || layout === 'MainLayout',
         }"
       >
-        <PayElectricityFrom :layout="layout" />
-      </Card>
-      <Card v-else class="mx-auto md:w-6/12">
         <PayElectricityFrom :layout="layout" />
       </Card>
     </Card>
