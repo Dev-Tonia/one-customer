@@ -22,7 +22,7 @@ const value = ref("");
       >
         No Token?
       </div>
-      <div class="flex items-center justify-center">
+      <div class="hidden min-[580px]:flex items-center justify-center">
         <a
           href="#"
           class="rounded-md font-bold text-white inline-block pt-1 px-1 hover:bg-green-500"
@@ -33,9 +33,9 @@ const value = ref("");
     </div>
 
     <div class="flex items-center gap-2">
-      <div>
+      <div class="">
         <a
-          href="https://api.whatsapp.com/send?phone=2349087610379"
+          href="tel:+2349087610511"
           target="_blank"
           rel="noopener noreferrer"
           class="text-white"
@@ -44,7 +44,7 @@ const value = ref("");
           <span>09087610511</span>
         </a>
       </div>
-      <div>
+      <div class="hidden min-[580px]:block">
         <a
           href="https://api.whatsapp.com/send?phone=2349087610379"
           target="_blank"
@@ -55,7 +55,7 @@ const value = ref("");
           <span>09087610379</span>
         </a>
       </div>
-      <SocialLinks class="gap-x-1" />
+      <SocialLinks class="gap-x-1 hidden md:flex" />
     </div>
   </div>
 

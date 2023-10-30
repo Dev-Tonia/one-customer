@@ -51,7 +51,7 @@ const toggleMenu = () => {
     </nav>
   </header>
 
-  <div class="bg-transparent md-lg:bg-white mt-[136px]"></div>
+  <div class="bg-transparent md-lg:bg-white mt-[110px]"></div>
 </template>
 
 <style scoped></style>
