@@ -14,7 +14,9 @@ const toggleMenu = () => {
   <header class="">
     <nav class="fixed top-0 right-0 left-0 z-20">
       <TopNavbar />
-      <div class="bg-white py-2 wrapper bg-opacity-[95%] md-lg:bg-opacity-90">
+      <div
+        class="bg-white py-2 wrapper bg-opacity-[95%] md-lg:bg-opacity-[98%]"
+      >
         <div class="flex items-center justify-between">
           <div class="brand-logo h-12 w-28 flex justify-center items-center">
             <RouterLink to="/">
