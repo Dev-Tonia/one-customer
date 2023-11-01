@@ -83,7 +83,7 @@ const transactions = ref([
       <div class="py-4">
         <h5 class="font-semibold text-gray-400 mb-2">Latest Transactions</h5>
       </div>
-      <div class="mt-1 mb-4">
+      <div class="mt-1 mb-4 overflow-x-scroll md:overflow-x-hidden">
         <table class="w-full">
           <thead>
             <tr class="mb-5">
