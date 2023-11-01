@@ -83,15 +83,15 @@ const transactions = ref([
       <div class="py-4">
         <h5 class="font-semibold text-gray-400 mb-2">Latest Transactions</h5>
       </div>
-      <div class="mt-1 mb-4 overflow-x-scroll md:overflow-x-hidden">
+      <div class="mt-1 mb-4 overflow-x-auto">
         <table class="w-full">
-          <thead>
+          <thead class="text-gray-500 uppercase font-semibold text-left">
             <tr class="mb-5">
-              <th class="font-semibold text-gray-500 text-left">Reference</th>
-              <th class="font-semibold text-gray-500 text-left">Type</th>
-              <th class="font-semibold text-gray-500 text-left">Amount</th>
-              <th class="font-semibold text-gray-500 text-left">Description</th>
-              <th class="font-semibold text-gray-500 text-left">Date</th>
+              <th class="px-6 py-3">Reference</th>
+              <th class="px-6 py-3">Type</th>
+              <th class="px-6 py-3">Amount</th>
+              <th class="px-6 py-3">Description</th>
+              <th class="px-6 py-3">Date</th>
             </tr>
           </thead>
           <tbody>
@@ -107,21 +107,26 @@ const transactions = ref([
               :key="index"
               class="mb-5"
             >
-              <td class="text-xs py-2 font-medium">
+              <td class="text-xs py-2 px-6 font-medium">
                 {{ transaction.reference }}
               </td>
-              <td class="text-xs py-2 font-medium">{{ transaction.type }}</td>
-              <td class="text-xs py-2 font-medium">
+              <td class="text-xs py-2 px-6 font-medium">
+                {{ transaction.type }}
+              </td>
+              <td class="text-xs py-2 px-6 font-medium">
                 {{ transaction.amount }}
               </td>
-              <td class="text-xs py-2 font-medium">
+              <td class="text-xs py-2 px-6 font-medium">
                 {{ transaction.description }}
               </td>
-              <td class="text-xs py-2 font-medium">{{ transaction.date }}</td>
+              <td class="text-xs py-2 px-6 font-medium">
+                {{ transaction.date }}
+              </td>
             </tr>
           </tbody>
         </table>
       </div>
+
       <hr />
     </Card>
   </div>

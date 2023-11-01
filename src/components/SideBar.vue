@@ -28,7 +28,7 @@ const NavItems = ref([
 </script>
 <template>
   <div class="fixed h-full">
-    <nav class="bg-gray-50 h-full text-gray-900 overflow-y-scroll">
+    <nav class="bg-gray-50 h-full text-gray-900 overflow-y-auto">
       <div class="py-[1.15rem] px-6 flex items-center justify-between">
         <RouterLink to="/">
           <!-- <h1 class="text-lg  font-semibold">Easy Pay</h1> -->
