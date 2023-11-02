@@ -72,6 +72,12 @@ const NavItems = ref([
           </a>
         </li>
         <li class="py-2 px-[26px] hover:bg-sideHover">
+          <RouterLink to="transactions" class="flex items-center gap-3">
+            <i class="ri-exchange-funds-line text-gray-400 text-xl"></i>
+            <span class="text-sm">Transactions</span>
+          </RouterLink>
+        </li>
+        <li class="py-2 px-[26px] hover:bg-sideHover">
           <a href="#" class="flex items-center gap-3">
             <i class="ri-share-line text-gray-400 text-xl"></i>
 

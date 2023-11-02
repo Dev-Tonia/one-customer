@@ -85,6 +85,13 @@ const router = createRouter({
       },
     },
     {
+      path: "/transactions",
+      component: () => import("../pages/TransactionPage.vue"),
+      meta: {
+        layout: DashBoardLayout,
+      },
+    },
+    {
       path: "/all-product",
       component: AllProduct,
       meta: {
