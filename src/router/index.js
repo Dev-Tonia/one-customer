@@ -22,64 +22,63 @@ const router = createRouter({
   routes: [
     {
       path: "/",
-      component: HomePage,
+      component: () => import("../pages/HomePage.vue"),
       meta: {
         layout: MainLayout,
       },
     },
     {
       path: "/contact-us",
-      component: ContactUs,
+      component: () => import("../pages/ContactUs.vue"),
       meta: {
         layout: MainLayout,
       },
     },
     {
       path: "/about-us",
-      component: AboutUs,
+      component: () => import("../pages/AboutUs.vue"),
       meta: {
         layout: MainLayout,
       },
     },
     {
       path: "/electricity",
-      component: Electricity,
+      component: () => import("../pages/electricity/Electricity.vue"),
       meta: {
         layout: MainLayout,
       },
     },
     {
       path: "/electricity/:name",
-      component: ElectricityForm,
+      component: () => import("../pages/electricity/ElectricityForm.vue"),
       meta: {
         layout: MainLayout,
       },
     },
     {
       path: "/buy-airtime",
-      component: BuyAirtime,
+      component: () => import("../pages/airtime/BuyAirtime.vue"),
       meta: {
         layout: MainLayout,
       },
     },
     {
       path: "/buy-data",
-      component: BuyData,
+      component: () => import("../pages/mobileData/BuyData.vue"),
       meta: {
         layout: MainLayout,
       },
     },
-
     {
       path: "/buy-tv-sub",
-      component: BuyTvSub,
+      component: () => import("../pages/BuyTvSub.vue"),
       meta: {
         layout: MainLayout,
       },
     },
     {
       path: "/order-summary",
-      component: OrderSummary,
+      component: () => import("../pages/OrderSummary.vue"),
       meta: {
         layout: MainLayout,
       },
@@ -93,85 +92,84 @@ const router = createRouter({
     },
     {
       path: "/all-product",
-      component: AllProduct,
+      component: () => import("../pages/productTab/AllProducts.vue"),
       meta: {
         layout: MainLayout,
       },
     },
     {
       path: "/sign-up",
-      component: SignUp,
+      component: () => import("../pages/AuthPages/SignUp.vue"),
       meta: {
         layout: MainLayout,
       },
     },
     {
       path: "/login",
-      component: Login,
+      component: () => import("../pages/AuthPages/Login.vue"),
       meta: {
         layout: MainLayout,
       },
     },
     {
       path: "/retrieve-password",
-      component: RetrievePassword,
+      component: () => import("../pages/AuthPages/RetrievePassword.vue"),
       meta: {
         layout: MainLayout,
       },
     },
     {
       path: "/change-password",
-      component: ChangePassword,
+      component: () => import("../pages/AuthPages/ChangePassword.vue"),
       meta: {
         layout: MainLayout,
       },
     },
     {
       path: "/dashboard",
-      component: Dashboard,
+      component: () => import("../pages/Dashboard.vue"),
       meta: {
         layout: DashBoardLayout,
       },
     },
     {
       path: "/user.electricity",
-      component: Electricity,
+      component: () => import("../pages/electricity/Electricity.vue"),
       meta: {
         layout: DashBoardLayout,
       },
     },
     {
       path: "/user.electricity/:name",
-      component: ElectricityForm,
+      component: () => import("../pages/electricity/ElectricityForm.vue"),
       meta: {
         layout: DashBoardLayout,
       },
     },
     {
       path: "/user.buy-airtime",
-      component: BuyAirtime,
+      component: () => import("../pages/airtime/BuyAirtime.vue"),
       meta: {
         layout: DashBoardLayout,
       },
     },
     {
       path: "/user.buy-data",
-      component: BuyData,
+      component: () => import("../pages/mobileData/BuyData.vue"),
       meta: {
         layout: DashBoardLayout,
       },
     },
-
     {
       path: "/user.buy-tv-sub",
-      component: BuyTvSub,
+      component: () => import("../pages/BuyTvSub.vue"),
       meta: {
         layout: DashBoardLayout,
       },
     },
     {
       path: "/user.order-summary",
-      component: OrderSummary,
+      component: () => import("../pages/OrderSummary.vue"),
       meta: {
         layout: DashBoardLayout,
       },

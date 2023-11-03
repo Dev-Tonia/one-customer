@@ -9,7 +9,9 @@ const { selectTab, activeTab } = useProviderTab();
   <div class="py-5 wrapper bg-[#F3F5F9]">
     <Card>
       <div class="flex justify-between pt-8 pb-4">
-        <h2 class="font-semibold text-xl">All Transactions</h2>
+        <h2 class="font-semibold text-xl">
+          {{ activeTab || "All" }} Transactions
+        </h2>
         <div class="dropdown">
           <span class="cursor-pointer">
             <i class="ri-filter-2-line"></i> Filter</span
@@ -19,7 +21,7 @@ const { selectTab, activeTab } = useProviderTab();
               class="cursor-pointer py-1"
               v-for="(service, index) in services"
               :key="service"
-              @click=""
+              @click="selectTab(service)"
             >
               {{ service }}
             </div>
