@@ -156,6 +156,14 @@ const router = createRouter({
       },
     },
     {
+      path: "/profile",
+      component: () =>
+        import(/* webpackChunkName: "profile" */ "../pages/ProfilePage.vue"),
+      meta: {
+        layout: DashBoardLayout,
+      },
+    },
+    {
       path: "/user.electricity",
       component: ElectricityDiscos,
       meta: {
