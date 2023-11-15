@@ -53,7 +53,7 @@ const { selectTab, activeTab } = useProviderTab();
           'md:w-6/12': !openSideBar.isOpen || layout === 'MainLayout',
         }"
       >
-        <AirtimeForm activeTab="activeTab" />
+        <AirtimeForm :activeTab="activeTab" />
       </CardVue>
     </CardVue>
   </div>

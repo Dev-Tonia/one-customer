@@ -3,11 +3,12 @@ import { useRouter } from "vue-router";
 const router = useRouter();
 import Button from "../../components/Button.vue";
 const { activeTab } = defineProps(["activeTab"]);
+console.log(activeTab);
 </script>
 <template>
   <form action="" method="post">
-    <input type="text" :placeholder="`Enter ${activeTab} Phone Number`" />
-    <input type="text" disabled :placeholder="`${activeTab} VTU`" />
+    <input type="text" :placeholder="` Enter ${activeTab} Phone Number `" />
+    <input type="text" disabled :placeholder="` ${activeTab} VTU`" />
     <div class="flex w-full px-3 bg-[#F3F5F9] rounded-lg my-4 items-center">
       <span>&#8358;</span>
       <input

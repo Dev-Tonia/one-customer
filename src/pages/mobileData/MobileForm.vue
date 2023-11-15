@@ -9,6 +9,8 @@ const dataOption = useBuyData();
 const router = useRouter();
 
 const { activeTab } = defineProps(["activeTab"]);
+console.log(activeTab);
+
 const mtnValues = [
   {
     title: "100 DataPlan 100MB Daily Daily",
