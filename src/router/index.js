@@ -11,6 +11,11 @@ import ContactUs from "../pages/ContactUs.vue";
 import AboutUs from "../pages/AboutUs.vue";
 import MainLayout from "../layouts/MainLayout.vue";
 import DashBoardLayout from "../layouts/DashBoardLayout.vue";
+import SignUp from "../pages/AuthPages/SignUp.vue";
+import Login from "../pages/AuthPages/Login.vue";
+import RetrievePassword from "../pages/AuthPages/RetrievePassword.vue";
+import ChangePassword from "../pages/AuthPages/ChangePassword.vue";
+import AllProduct from "../pages/productTab/AllProducts.vue";
 
 const router = createRouter({
   history: createWebHistory(),
@@ -75,6 +80,41 @@ const router = createRouter({
     {
       path: "/order-summary",
       component: OrderSummary,
+      meta: {
+        layout: MainLayout,
+      },
+    },
+    {
+      path: "/all-product",
+      component: AllProduct,
+      meta: {
+        layout: MainLayout,
+      },
+    },
+    {
+      path: "/sign-up",
+      component: SignUp,
+      meta: {
+        layout: MainLayout,
+      },
+    },
+    {
+      path: "/login",
+      component: Login,
+      meta: {
+        layout: MainLayout,
+      },
+    },
+    {
+      path: "/retrieve-password",
+      component: RetrievePassword,
+      meta: {
+        layout: MainLayout,
+      },
+    },
+    {
+      path: "/change-password",
+      component: ChangePassword,
       meta: {
         layout: MainLayout,
       },

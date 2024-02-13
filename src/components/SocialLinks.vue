@@ -1,7 +1,7 @@
 <template>
   <div class="flex gap-x-6 sm:justify-between">
     <a
-      href="#"
+      href="https://www.facebook.com/easypaybillng"
       target="_blank"
       rel="noopener noreferrer"
       class="text-gray-500 hover:text-green-900 dark:hover:text-white"
@@ -39,7 +39,7 @@
       </svg>
     </a>
     <a
-      href="#"
+      href="https://twitter.com/easypaybillng"
       target="_blank"
       rel="noopener noreferrer"
       class="text-gray-500 hover:text-green-900 dark:hover:text-white"

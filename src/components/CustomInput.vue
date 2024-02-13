@@ -14,17 +14,6 @@ defineProps({
 
 <template>
   <div class="form-group">
-    <!-- 
-    <input
-      type="text"
-      :value="value"
-      @input="value = $event.target.value"
-      :placeholder="placeholderForNumber || 'Enter Phone Number'"
-    /> -->
-    <!-- <input
-            type="text"
-            :placeholder="placeholderForNumber || 'Enter Phone Number'"
-          /> -->
     <input
       type="text"
       :value="modelValue"
@@ -34,7 +23,7 @@ defineProps({
   </div>
 </template>
 <style scoped>
-input[type="text"] {
+input {
   @apply block w-full py-2 px-3 bg-[#F3F5F9] rounded-lg  border-none outline-none;
 }
 input[type="text"]:disabled::placeholder {
