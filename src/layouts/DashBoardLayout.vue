@@ -3,6 +3,7 @@ import { useOpenNavbarStore } from "../store/openNavbar";
 import SideBar from "../components/SideBar.vue";
 import MobileSideBar from "../components/MobileSideBar.vue";
 import Footer from "../components/Footer.vue";
+import TopNavbar from "../components/TopNavbar.vue";
 const openSideBar = useOpenNavbarStore();
 </script>
 <template>
@@ -14,8 +15,9 @@ const openSideBar = useOpenNavbarStore();
       </div>
     </div>
     <div :class="{ ' md:w-[77%]': openSideBar.isOpen }">
-      <header class="py-3 wrapper bg-white">
-        <nav class="">
+      <header class="bg-white">
+        <TopNavbar />
+        <nav class="wrapper py-3">
           <div class="flex justify-start">
             <i
               class="ri-menu-2-fill text-2xl font-bold cursor-pointer"

@@ -54,7 +54,12 @@ import ContactUsIcon from "../components/ContactUsIcon.vue";
         ></span>
         <span class="flex flex-col">
           <a href="tel:+2349087610511">+2349087610511</a>
-          <a href="tel:+2349087610379">+2349087610379</a>
+          <a
+            href="https://api.whatsapp.com/send?phone=2349087610379"
+            target="_blank"
+            rel="noopener noreferrer"
+            >+2349087610379</a
+          >
         </span>
       </div>
     </div>

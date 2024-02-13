@@ -1,49 +1,55 @@
 import { createRouter, createWebHistory } from "vue-router";
-import Dashboard from "../pages/Dashboard.vue";
-import Electricity from "../pages/Electricity/Electricity.vue";
-import ElectricityForm from "../pages/Electricity/ElectricityForm.vue";
-import BuyAirtime from "../pages/BuyAirtime.vue";
-import BuyData from "../pages/BuyData.vue";
-import BuyTvSub from "../pages/BuyTvSub.vue";
-import OrderSummary from "../pages/OrderSummary.vue";
-import HomePage from "../pages/HomePage.vue";
-import ContactUs from "../pages/ContactUs.vue";
-import AboutUs from "../pages/AboutUs.vue";
 import MainLayout from "../layouts/MainLayout.vue";
 import DashBoardLayout from "../layouts/DashBoardLayout.vue";
-import SignUp from "../pages/AuthPages/SignUp.vue";
-import Login from "../pages/AuthPages/Login.vue";
-import RetrievePassword from "../pages/AuthPages/RetrievePassword.vue";
-import ChangePassword from "../pages/AuthPages/ChangePassword.vue";
-import AllProduct from "../pages/productTab/AllProducts.vue";
 
+const ElectricityDiscos = () =>
+  import(
+    /* webpackChunkName: "electricity" */ "../pages/electricity/Electricity.vue"
+  );
+const ElectricityForm = () =>
+  import(
+    /* webpackChunkName: "electricity-form" */ "../pages/electricity/ElectricityForm.vue"
+  );
+const BuyAirtime = () =>
+  import(
+    /* webpackChunkName: "buy-airtime" */ "../pages/airtime/BuyAirtime.vue"
+  );
+const BuyData = () =>
+  import(/* webpackChunkName: "buy-data" */ "../pages/mobileData/BuyData.vue");
+const BuyCable = () =>
+  import(/* webpackChunkName: "buy-cable" */ "../pages/BuyTvSub.vue");
+const OrderSummary = () =>
+  import(/* webpackChunkName: "order-summary" */ "../pages/OrderSummary.vue");
 const router = createRouter({
   history: createWebHistory(),
   routes: [
     {
       path: "/",
-      component: HomePage,
+      component: () =>
+        import(/* webpackChunkName: "home-page" */ "../pages/HomePage.vue"),
       meta: {
         layout: MainLayout,
       },
     },
     {
       path: "/contact-us",
-      component: ContactUs,
+      component: () =>
+        import(/* webpackChunkName: "contact-us" */ "../pages/ContactUs.vue"),
       meta: {
         layout: MainLayout,
       },
     },
     {
       path: "/about-us",
-      component: AboutUs,
+      component: () =>
+        import(/* webpackChunkName: "about-us" */ "../pages/AboutUs.vue"),
       meta: {
         layout: MainLayout,
       },
     },
     {
       path: "/electricity",
-      component: Electricity,
+      component: ElectricityDiscos,
       meta: {
         layout: MainLayout,
       },
@@ -69,10 +75,9 @@ const router = createRouter({
         layout: MainLayout,
       },
     },
-
     {
       path: "/buy-tv-sub",
-      component: BuyTvSub,
+      component: BuyCable,
       meta: {
         layout: MainLayout,
       },
@@ -85,50 +90,82 @@ const router = createRouter({
       },
     },
     {
+      path: "/transactions",
+      component: () =>
+        import(
+          /* webpackChunkName: "transactions" */ "../pages/TransactionPage.vue"
+        ),
+      meta: {
+        layout: DashBoardLayout,
+      },
+    },
+    {
       path: "/all-product",
-      component: AllProduct,
+      component: () =>
+        import(
+          /* webpackChunkName: "all-product" */ "../pages/productTab/AllProducts.vue"
+        ),
       meta: {
         layout: MainLayout,
       },
     },
     {
       path: "/sign-up",
-      component: SignUp,
+      component: () =>
+        import(
+          /* webpackChunkName: "sign-up" */ "../pages/AuthPages/SignUp.vue"
+        ),
       meta: {
         layout: MainLayout,
       },
     },
     {
       path: "/login",
-      component: Login,
+      component: () =>
+        import(/* webpackChunkName: "login" */ "../pages/AuthPages/Login.vue"),
       meta: {
         layout: MainLayout,
       },
     },
     {
       path: "/retrieve-password",
-      component: RetrievePassword,
+      component: () =>
+        import(
+          /* webpackChunkName: "retrieve-password" */ "../pages/AuthPages/RetrievePassword.vue"
+        ),
       meta: {
         layout: MainLayout,
       },
     },
     {
       path: "/change-password",
-      component: ChangePassword,
+      component: () =>
+        import(
+          /* webpackChunkName: "change-password" */ "../pages/AuthPages/ChangePassword.vue"
+        ),
       meta: {
         layout: MainLayout,
       },
     },
     {
       path: "/dashboard",
-      component: Dashboard,
+      component: () =>
+        import(/* webpackChunkName: "dashboard" */ "../pages/Dashboard.vue"),
+      meta: {
+        layout: DashBoardLayout,
+      },
+    },
+    {
+      path: "/profile",
+      component: () =>
+        import(/* webpackChunkName: "profile" */ "../pages/ProfilePage.vue"),
       meta: {
         layout: DashBoardLayout,
       },
     },
     {
       path: "/user.electricity",
-      component: Electricity,
+      component: ElectricityDiscos,
       meta: {
         layout: DashBoardLayout,
       },
@@ -154,10 +191,9 @@ const router = createRouter({
         layout: DashBoardLayout,
       },
     },
-
     {
       path: "/user.buy-tv-sub",
-      component: BuyTvSub,
+      component: BuyCable,
       meta: {
         layout: DashBoardLayout,
       },
@@ -170,6 +206,9 @@ const router = createRouter({
       },
     },
   ],
+  scrollBehavior() {
+    return { top: 0, left: 0 };
+  },
 });
 
 export default router;

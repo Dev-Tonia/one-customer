@@ -62,23 +62,6 @@ const gotvValue = [
     amount: 350,
   },
 ];
-const estisalateValue = [
-  {
-    title: " 9 350 1GB Daily Plan + 3mins Daily",
-    value: "350 daily",
-    amount: 350,
-  },
-  {
-    title: " 9 600 2.5GB 2-Day Plan Daily",
-    value: "600 daily",
-    amount: 600,
-  },
-  {
-    title: " 9  800 3GB 2-Days Bundle Daily",
-    value: "800 daily",
-    amount: 800,
-  },
-];
 const startimesValue = [
   {
     title: "A 350 1GB Daily Plan + 3mins Daily",

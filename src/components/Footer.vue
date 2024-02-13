@@ -18,7 +18,7 @@ const currentYear = date.value.getFullYear();
         </RouterLink>
         <div class="mt-4 flex items-center gap-3 md:block">
           <span class="text-gray-300 inline-block mb-2"> Follows on:</span>
-          <SocialLinks />
+          <SocialLinks class="gap-x-6" />
         </div>
       </div>
       <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3 md:col-span-2">
@@ -96,7 +96,7 @@ const currentYear = date.value.getFullYear();
         <RouterLink to="/" class="hover:underline">EasyPayBills</RouterLink>.
         All Rights Reserved.
       </span>
-      <SocialLinks />
+      <SocialLinks class="gap-x-6" />
     </div>
   </footer>
 </template>

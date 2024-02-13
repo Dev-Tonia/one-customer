@@ -31,7 +31,7 @@ const tabs = {
         {{ tab }}
       </button>
     </div>
-    <component :is="tabs[currentTab]" class="tab"></component>
+    <component :is="tabs[currentTab]"></component>
   </div>
 </template>
 
