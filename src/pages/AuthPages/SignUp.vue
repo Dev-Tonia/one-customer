@@ -2,14 +2,22 @@
 import Button from "../../components/Button.vue";
 import CustomInput from "../../components/CustomInput.vue";
 import AuthLayout from "./AuthLayout.vue";
+import { ref } from "vue";
+const name = ref("");
 </script>
 <template>
   <AuthLayout>
-    <form action="" class="px-10">
+    <form action="" class="px-10" @submit="console.log(formData.email)">
       <h1 class="text-2xl font-semibold text-center mb-6">
         Create Your Account
       </h1>
-      <CustomInput placeholder="John Doe" type="text" class="mb-5" />
+      <CustomInput
+        placeholder="John Doe"
+        type="text"
+        class="mb-5"
+        :modelValue="name"
+      />
+      {{ name }}
       <CustomInput
         placeholder="johndoe@example.com"
         type="email"

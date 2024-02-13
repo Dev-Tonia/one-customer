@@ -2,6 +2,9 @@
 import Button from "../../components/Button.vue";
 import CustomInput from "../../components/CustomInput.vue";
 import AuthLayout from "./AuthLayout.vue";
+const formData = ref({
+  password: "",
+});
 </script>
 <template>
   <AuthLayout>
