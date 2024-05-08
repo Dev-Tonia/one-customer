@@ -2,6 +2,7 @@
 import { RouterLink } from "vue-router";
 import BillsDropDown from "./BillsDropDown.vue";
 import Button from "./Button.vue";
+const { toggleMenu } = defineProps(["toggleMenu"]);
 const NavItems = [
   { title: "Home", routeTo: "/" },
   {
@@ -22,6 +23,7 @@ const NavItems = [
           :to="item.routeTo"
           class="flex items-center gap-3"
           active-class=" active"
+          @click="toggleMenu"
         >
           <span class="text-xl font-semibold hover:text-primary">{{
             item.title
@@ -43,7 +45,7 @@ const NavItems = [
       </div>
       <div class="min-[360px]:w-4/12">
         <router-link to="/dashboard">
-          <Button class="w-full md-lg:w-fit"> Log In</Button>
+          <Button class="w-full md-lg:w-fit">Dashboard</Button>
         </router-link>
       </div>
     </div>
