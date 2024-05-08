@@ -56,56 +56,64 @@ import OutlineButton from "../components/OutlineButton.vue";
     </div>
 
     <div
-      class="grid grid-cols-2 max-w-[650px] gap-10 service-item justify-center"
+      class="grid grid-cols-2 md:min-w-[300px] gap-5 md:gap-10 service-item justify-center"
     >
       <div class="flex justify-center">
         <div
-          class="service-card px-3 py-10 min-w-[300px] w-full bg-white border-2 flex justify-center items-center flex-col rounded-md drop-shadow-2xl transition duration-[2000ms] ease-in-out hover:bg-primary hover:text-white hover:border-green-500"
+          class="px-3 py-10 md:min-w-[300px] w-full bg-white border-2 flex justify-center items-center flex-col rounded-md drop-shadow-2xl transition duration-[2000ms] ease-in-out hover:bg-primary hover:text-white hover:border-green-500"
         >
           <div
             class="icon-card h-12 w-12 rounded-full border-2 flex justify-center items-center"
           >
             <i class="ri-battery-charge-line text-4xl"></i>
           </div>
-          <h3 class="mt-3 text-lg font-semibold">Electricity Bill</h3>
+          <h3 class="mt-3 text-base min-[450px]:text-lg font-semibold">
+            Electricity Bill
+          </h3>
         </div>
       </div>
 
       <div class="flex justify-center">
         <div
-          class="px-3 py-10 bg-white max-w-[300px] w-full border-2 flex justify-center items-center flex-col rounded-md drop-shadow-2xl transition duration-[2000ms] ease-in-out hover:bg-primary hover:text-white hover:border-green-500"
+          class="px-3 py-10 bg-white md:min-w-[300px] w-full border-2 flex justify-center items-center flex-col rounded-md drop-shadow-2xl transition duration-[2000ms] ease-in-out hover:bg-primary hover:text-white hover:border-green-500"
         >
           <div
             class="h-12 w-12 rounded-full border flex justify-center items-center"
           >
             <i class="ri-phone-line text-4xl"></i>
           </div>
-          <h3 class="mt-3 text-lg font-semibold">Airtime Top up</h3>
+          <h3 class="mt-3 text-base min-[450px]:text-lg font-semibold">
+            Airtime Top up
+          </h3>
         </div>
       </div>
 
       <div class="flex justify-center">
         <div
-          class="px-3 py-10 max-w-[300px] w-full bg-white border-2 flex justify-center items-center flex-col rounded-md drop-shadow-2xl transition duration-[2000ms] ease-in-out hover:bg-primary hover:text-white hover:border-green-500"
+          class="px-3 py-10 md:min-w-[300px] w-full bg-white border-2 flex justify-center items-center flex-col rounded-md drop-shadow-2xl transition duration-[2000ms] ease-in-out hover:bg-primary hover:text-white hover:border-green-500"
         >
           <div
             class="h-12 w-12 rounded-full border flex justify-center items-center"
           >
             <i class="ri-global-line text-4xl"></i>
           </div>
-          <h3 class="mt-3 text-lg font-semibold">Mobile Data</h3>
+          <h3 class="mt-3 text-base min-[450px]:text-lg font-semibold">
+            Mobile Data
+          </h3>
         </div>
       </div>
       <div class="flex justify-center">
         <div
-          class="px-3 py-10 max-w-[300px] w-full bg-white flex justify-center items-center flex-col border-2 rounded-md drop-shadow-2xl transition duration-[2000ms] ease-in-out hover:bg-primary hover:text-white hover:border-green-500"
+          class="px-3 py-10 md:min-w-[300px] w-full bg-white flex justify-center items-center flex-col border-2 rounded-md drop-shadow-2xl transition duration-[2000ms] ease-in-out hover:bg-primary hover:text-white hover:border-green-500"
         >
           <div
             class="h-12 w-12 rounded-full border flex justify-center items-center"
           >
             <i class="ri-tv-line text-4xl"></i>
           </div>
-          <h3 class="mt-3 text-lg font-semibold">Cable Tv</h3>
+          <h3 class="mt-3 text-base min-[450px]:text-lg font-semibold">
+            Cable Tv
+          </h3>
         </div>
       </div>
     </div>

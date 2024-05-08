@@ -2,10 +2,13 @@
 import Button from "../../components/Button.vue";
 import CustomInput from "../../components/CustomInput.vue";
 import AuthLayout from "./AuthLayout.vue";
+const formData = ref({
+  password: "",
+});
 </script>
 <template>
   <AuthLayout>
-    <form action="" class="bg-white pt-6 pb-12 px-10">
+    <form action="" class="px-10">
       <h1 class="text-2xl font-semibold text-center mb-6">
         Change Your Password
       </h1>

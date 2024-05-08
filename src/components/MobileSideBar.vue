@@ -13,9 +13,9 @@ function closeOverLay() {
   }
 }
 
-router.afterEach(() => {
-  closeOverLay();
-});
+// router.afterEach(() => {
+//   closeOverLay();
+// });
 </script>
 <template>
   <div class="overlay" v-if="showOverlay" @click="closeOverLay">

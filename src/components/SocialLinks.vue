@@ -1,10 +1,10 @@
 <template>
-  <div class="flex gap-x-6 sm:justify-between">
+  <div class="flex sm:justify-between">
     <a
       href="https://www.facebook.com/easypaybillng"
       target="_blank"
       rel="noopener noreferrer"
-      class="text-gray-500 hover:text-green-900 dark:hover:text-white"
+      class="text-gray-300 hover:text-green-500 dark:hover:text-white"
     >
       <svg
         class="w-6 h-6"
@@ -23,7 +23,7 @@
       href="https://www.instagram.com/easypaybillng/?utm_source=qr"
       target="_blank"
       rel="noopener noreferrer"
-      class="text-gray-500 hover:text-green-900 dark:hover:text-white"
+      class="text-gray-300 hover:text-green-500 dark:hover:text-white"
     >
       <svg
         class="w-6 h-6"
@@ -42,7 +42,7 @@
       href="https://twitter.com/easypaybillng"
       target="_blank"
       rel="noopener noreferrer"
-      class="text-gray-500 hover:text-green-900 dark:hover:text-white"
+      class="text-gray-300 hover:text-green-500 dark:hover:text-white"
     >
       <svg
         class="w-6 h-6"
