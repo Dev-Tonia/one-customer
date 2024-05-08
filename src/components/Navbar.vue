@@ -1,14 +1,26 @@
 <script setup>
 import { RouterLink } from "vue-router";
-import { ref } from "vue";
+import { ref, onMounted, onUnmounted } from "vue";
 import Button from "../components/Button.vue";
 import MenuItem from "./MenuItem.vue";
 import TopNavbar from "./TopNavbar.vue";
-
+const windowSize = ref(window.innerWidth);
 const isMenuOpen = ref(true);
+
+onMounted(() => {
+  window.addEventListener("resize", () => {
+    windowSize.value = window.innerWidth;
+  });
+});
+onUnmounted(() => {
+  window.removeEventListener("resize", () => {
+    windowSize.value = window.innerWidth;
+  });
+});
 const toggleMenu = () => {
   isMenuOpen.value = !isMenuOpen.value;
 };
+console.log(windowSize);
 </script>
 <template>
   <header class="">
@@ -41,13 +53,13 @@ const toggleMenu = () => {
             </div>
             <div>
               <router-link to="/dashboard">
-                <Button> Log In</Button>
+                <Button> Dashboard</Button>
               </router-link>
             </div>
           </div>
         </div>
-        <div class="md-lg:hidden" :class="{ hidden: isMenuOpen }">
-          <MenuItem />
+        <div class="md-lg:hidden" :class="{ 'hidden bg-black ': isMenuOpen }">
+          <MenuItem :toggleMenu="toggleMenu" />
         </div>
       </div>
     </nav>
