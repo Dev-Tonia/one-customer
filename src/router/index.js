@@ -2,47 +2,33 @@ import { createRouter, createWebHistory } from "vue-router";
 import MainLayout from "../layouts/MainLayout.vue";
 import DashBoardLayout from "../layouts/DashBoardLayout.vue";
 
-const ElectricityDiscos = () =>
-  import(
-    /* webpackChunkName: "electricity" */ "../pages/electricity/Electricity.vue"
-  );
+const ElectricityDiscos = () => import("../pages/electricity/Electricity.vue");
 const ElectricityForm = () =>
-  import(
-    /* webpackChunkName: "electricity-form" */ "../pages/electricity/ElectricityForm.vue"
-  );
-const BuyAirtime = () =>
-  import(
-    /* webpackChunkName: "buy-airtime" */ "../pages/airtime/BuyAirtime.vue"
-  );
-const BuyData = () =>
-  import(/* webpackChunkName: "buy-data" */ "../pages/mobileData/BuyData.vue");
-const BuyCable = () =>
-  import(/* webpackChunkName: "buy-cable" */ "../pages/BuyTvSub.vue");
-const OrderSummary = () =>
-  import(/* webpackChunkName: "order-summary" */ "../pages/OrderSummary.vue");
+  import("../pages/electricity/ElectricityForm.vue");
+const BuyAirtime = () => import("../pages/airtime/BuyAirtime.vue");
+const BuyData = () => import("../pages/mobileData/BuyData.vue");
+const BuyCable = () => import("../pages/BuyTvSub.vue");
+const OrderSummary = () => import("../pages/OrderSummary.vue");
 const router = createRouter({
   history: createWebHistory(),
   routes: [
     {
       path: "/",
-      component: () =>
-        import(/* webpackChunkName: "home-page" */ "../pages/HomePage.vue"),
+      component: () => import("../pages/HomePage.vue"),
       meta: {
         layout: MainLayout,
       },
     },
     {
       path: "/contact-us",
-      component: () =>
-        import(/* webpackChunkName: "contact-us" */ "../pages/ContactUs.vue"),
+      component: () => import("../pages/ContactUs.vue"),
       meta: {
         layout: MainLayout,
       },
     },
     {
       path: "/about-us",
-      component: () =>
-        import(/* webpackChunkName: "about-us" */ "../pages/AboutUs.vue"),
+      component: () => import("../pages/AboutUs.vue"),
       meta: {
         layout: MainLayout,
       },
@@ -91,74 +77,56 @@ const router = createRouter({
     },
     {
       path: "/transactions",
-      component: () =>
-        import(
-          /* webpackChunkName: "transactions" */ "../pages/TransactionPage.vue"
-        ),
+      component: () => import("../pages/TransactionPage.vue"),
       meta: {
         layout: DashBoardLayout,
       },
     },
     {
       path: "/all-product",
-      component: () =>
-        import(
-          /* webpackChunkName: "all-product" */ "../pages/productTab/AllProducts.vue"
-        ),
+      component: () => import("../pages/productTab/AllProducts.vue"),
       meta: {
         layout: MainLayout,
       },
     },
     {
       path: "/sign-up",
-      component: () =>
-        import(
-          /* webpackChunkName: "sign-up" */ "../pages/AuthPages/SignUp.vue"
-        ),
+      component: () => import("../pages/AuthPages/SignUp.vue"),
       meta: {
         layout: MainLayout,
       },
     },
     {
       path: "/login",
-      component: () =>
-        import(/* webpackChunkName: "login" */ "../pages/AuthPages/Login.vue"),
+      component: () => import("../pages/AuthPages/Login.vue"),
       meta: {
         layout: MainLayout,
       },
     },
     {
       path: "/retrieve-password",
-      component: () =>
-        import(
-          /* webpackChunkName: "retrieve-password" */ "../pages/AuthPages/RetrievePassword.vue"
-        ),
+      component: () => import("../pages/AuthPages/RetrievePassword.vue"),
       meta: {
         layout: MainLayout,
       },
     },
     {
       path: "/change-password",
-      component: () =>
-        import(
-          /* webpackChunkName: "change-password" */ "../pages/AuthPages/ChangePassword.vue"
-        ),
+      component: () => import("../pages/AuthPages/ChangePassword.vue"),
       meta: {
         layout: MainLayout,
       },
     },
     {
       path: "/dashboard",
-      component: () =>
-        import(/* webpackChunkName: "dashboard" */ "../pages/Dashboard.vue"),
+      component: () => import("../pages/Dashboard.vue"),
       meta: {
         layout: DashBoardLayout,
       },
     },
     {
       path: "/profile",
-      component: () =>
-        import(/* webpackChunkName: "profile" */ "../pages/ProfilePage.vue"),
+      component: () => import("../pages/ProfilePage.vue"),
       meta: {
         layout: DashBoardLayout,
       },
