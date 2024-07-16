@@ -9,6 +9,8 @@ const BuyAirtime = () => import("../pages/airtime/BuyAirtime.vue");
 const BuyData = () => import("../pages/mobileData/BuyData.vue");
 const BuyCable = () => import("../pages/BuyTvSub.vue");
 const OrderSummary = () => import("../pages/OrderSummary.vue");
+// const OrderSummary = () => import("../pages/OrderSummary.vue");
+
 const router = createRouter({
   history: createWebHistory(),
   routes: [
@@ -42,6 +44,13 @@ const router = createRouter({
     },
     {
       path: "/electricity/:name",
+      component: ElectricityForm,
+      meta: {
+        layout: MainLayout,
+      },
+    },
+    {
+      path: "/edu-connect",
       component: ElectricityForm,
       meta: {
         layout: MainLayout,

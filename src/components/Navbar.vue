@@ -23,11 +23,11 @@ const toggleMenu = () => {
 console.log(windowSize);
 </script>
 <template>
-  <header class="">
-    <nav class="fixed top-0 right-0 left-0 z-20">
-      <TopNavbar />
+  <header class="r">
+    <nav class="fixed top-0 right-0 left-0 z-20 backdrop-blur">
+      <TopNavbar class="" />
       <div
-        class="bg-white py-2 wrapper bg-opacity-[95%] md-lg:bg-opacity-[98%]"
+        class="bg-white py-2 wrapper bg-opacity-[80%] md-lg:bg-opacity-[80%]"
       >
         <div class="flex items-center justify-between">
           <div class="brand-logo h-12 w-28 flex justify-center items-center">
@@ -48,7 +48,12 @@ console.log(windowSize);
           <div class="md-lg:flex space-x-4 hidden">
             <div>
               <RouterLink to="/sign-up">
-                <Button class=""> Sign In</Button>
+                <Button
+                  class="border border-primary shadow-lg shadow-slate-50"
+                  color=" "
+                >
+                  Sign In</Button
+                >
               </RouterLink>
             </div>
             <div>

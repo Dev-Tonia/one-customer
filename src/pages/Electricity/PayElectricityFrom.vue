@@ -18,7 +18,7 @@ const { getRoutePathLayout } = useLayout();
       class="bg-[#F3F5F9] rounded-lg"
       v-model="selectOption"
     >
-      <option value="" disabled placeholder=" kkkkk">Select Meter Type</option>
+      <option value="" disabled placeholder=" ">Select Meter Type</option>
       <option v-for="meter in meterType" :key="meter" :value="meter">
         {{ meter }}
       </option>
