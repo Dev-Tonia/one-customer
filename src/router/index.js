@@ -2,13 +2,14 @@ import { createRouter, createWebHistory } from "vue-router";
 import MainLayout from "../layouts/MainLayout.vue";
 import DashBoardLayout from "../layouts/DashBoardLayout.vue";
 
-const ElectricityDiscos = () => import("../pages/electricity/Electricity.vue");
 const ElectricityForm = () =>
   import("../pages/electricity/ElectricityForm.vue");
 const BuyAirtime = () => import("../pages/airtime/BuyAirtime.vue");
 const BuyData = () => import("../pages/mobileData/BuyData.vue");
 const BuyCable = () => import("../pages/BuyTvSub.vue");
 const OrderSummary = () => import("../pages/OrderSummary.vue");
+const EduCollect = () => import("../pages/EduCollect.vue");
+
 const router = createRouter({
   history: createWebHistory(),
   routes: [
@@ -35,7 +36,7 @@ const router = createRouter({
     },
     {
       path: "/electricity",
-      component: ElectricityDiscos,
+      component: () => import("../pages/electricity/Electricity.vue"),
       meta: {
         layout: MainLayout,
       },
@@ -43,6 +44,13 @@ const router = createRouter({
     {
       path: "/electricity/:name",
       component: ElectricityForm,
+      meta: {
+        layout: MainLayout,
+      },
+    },
+    {
+      path: "/edu-collect",
+      component: EduCollect,
       meta: {
         layout: MainLayout,
       },
@@ -162,6 +170,13 @@ const router = createRouter({
     {
       path: "/user.buy-tv-sub",
       component: BuyCable,
+      meta: {
+        layout: DashBoardLayout,
+      },
+    },
+    {
+      path: "/user.order-summary",
+      component: OrderSummary,
       meta: {
         layout: DashBoardLayout,
       },

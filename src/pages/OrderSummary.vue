@@ -77,7 +77,7 @@ const paymentOption = ref("Easy Pay Wallet");
             type="radio"
             id="flutterWave"
             name="Wallet-Options"
-            value="PayStack"
+            value="flutterWave"
           />
           <label for="flutterWave">FlutterWave</label><br />
         </div>

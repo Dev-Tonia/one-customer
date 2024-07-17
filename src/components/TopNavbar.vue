@@ -22,14 +22,6 @@ const value = ref("");
       >
         No Token?
       </div>
-      <div class="hidden min-[580px]:flex items-center justify-center">
-        <a
-          href="#"
-          class="rounded-md font-bold text-white inline-block pt-1 px-1 hover:bg-green-500"
-        >
-          Become An Agent
-        </a>
-      </div>
     </div>
 
     <div class="flex items-center gap-2">

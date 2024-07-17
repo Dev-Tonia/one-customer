@@ -24,6 +24,11 @@ const NavItems = ref([
     icon: "ri-tv-line",
     routeTo: "/user.buy-tv-sub",
   },
+  {
+    title: "Edu Collect",
+    icon: "ri-graduation-cap-fill",
+    routeTo: "/edu-collect",
+  },
 ]);
 </script>
 <template>

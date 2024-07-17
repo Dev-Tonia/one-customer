@@ -17,8 +17,7 @@
 
 <script setup>
 import { ref } from "vue";
-import { useRouter } from "vue-router";
-
+const emit = defineEmits(["toggle-menu"]);
 const showMenu = ref(false);
 
 const bills = [
@@ -26,17 +25,11 @@ const bills = [
   { title: "Cable Subscription", routeTo: "/buy-tv-sub" },
   { title: "Data Subscription", routeTo: "/buy-data" },
   { title: "Airtime Top up", routeTo: "/buy-airtime" },
+  { title: "Edu Collect", routeTo: "/edu-collect" },
 ];
 function toggleShow() {
   showMenu.value = !showMenu.value;
 }
-
-// close link page after each link click
-// const router = useRouter();
-
-// router.afterEach(() => {
-//   toggleShow();
-// });
 </script>
 
 <style scoped>
