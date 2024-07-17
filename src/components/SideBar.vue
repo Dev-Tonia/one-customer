@@ -25,9 +25,9 @@ const NavItems = ref([
     routeTo: "/user.buy-tv-sub",
   },
   {
-    title: "Edu Connect",
+    title: "Edu Collect",
     icon: "ri-graduation-cap-fill",
-    routeTo: "/Edu-connect",
+    routeTo: "/edu-collect",
   },
 ]);
 </script>

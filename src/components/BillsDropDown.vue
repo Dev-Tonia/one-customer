@@ -25,7 +25,7 @@ const bills = [
   { title: "Cable Subscription", routeTo: "/buy-tv-sub" },
   { title: "Data Subscription", routeTo: "/buy-data" },
   { title: "Airtime Top up", routeTo: "/buy-airtime" },
-  { title: "Edu Connect", routeTo: "/Edu-connect" },
+  { title: "Edu Collect", routeTo: "/edu-collect" },
 ];
 function toggleShow() {
   showMenu.value = !showMenu.value;

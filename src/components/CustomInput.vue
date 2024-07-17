@@ -13,7 +13,7 @@ defineProps({
 </script>
 
 <template>
-  <div class="form-group">
+  <div class="form-group my-3">
     <input
       type="text"
       :value="modelValue"

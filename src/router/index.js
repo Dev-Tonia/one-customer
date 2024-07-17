@@ -9,7 +9,7 @@ const BuyAirtime = () => import("../pages/airtime/BuyAirtime.vue");
 const BuyData = () => import("../pages/mobileData/BuyData.vue");
 const BuyCable = () => import("../pages/BuyTvSub.vue");
 const OrderSummary = () => import("../pages/OrderSummary.vue");
-// const OrderSummary = () => import("../pages/OrderSummary.vue");
+const EduCollect = () => import("../pages/EduCollect.vue");
 
 const router = createRouter({
   history: createWebHistory(),
@@ -50,8 +50,8 @@ const router = createRouter({
       },
     },
     {
-      path: "/edu-connect",
-      component: ElectricityForm,
+      path: "/edu-collect",
+      component: EduCollect,
       meta: {
         layout: MainLayout,
       },
@@ -171,6 +171,13 @@ const router = createRouter({
     {
       path: "/user.buy-tv-sub",
       component: BuyCable,
+      meta: {
+        layout: DashBoardLayout,
+      },
+    },
+    {
+      path: "/user.order-summary",
+      component: OrderSummary,
       meta: {
         layout: DashBoardLayout,
       },
