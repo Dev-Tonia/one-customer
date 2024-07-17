@@ -1,15 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
 import MainLayout from "../layouts/MainLayout.vue";
 import DashBoardLayout from "../layouts/DashBoardLayout.vue";
-
-const ElectricityForm = () =>
-  import("../pages/electricity/ElectricityForm.vue");
-const BuyAirtime = () => import("../pages/airtime/BuyAirtime.vue");
-const BuyData = () => import("../pages/mobileData/BuyData.vue");
-const BuyCable = () => import("../pages/BuyTvSub.vue");
-const OrderSummary = () => import("../pages/OrderSummary.vue");
-const EduCollect = () => import("../pages/EduCollect.vue");
-
 const router = createRouter({
   history: createWebHistory(),
   routes: [
@@ -43,42 +34,42 @@ const router = createRouter({
     },
     {
       path: "/electricity/:name",
-      component: ElectricityForm,
+      component: () => import("../pages/electricity/ElectricityForm.vue"),
       meta: {
         layout: MainLayout,
       },
     },
     {
       path: "/edu-collect",
-      component: EduCollect,
+      component: () => import("../pages/EduCollect.vue"),
       meta: {
         layout: MainLayout,
       },
     },
     {
       path: "/buy-airtime",
-      component: BuyAirtime,
+      component: () => import("../pages/airtime/BuyAirtime.vue"),
       meta: {
         layout: MainLayout,
       },
     },
     {
       path: "/buy-data",
-      component: BuyData,
+      component: () => import("../pages/mobileData/BuyData.vue"),
       meta: {
         layout: MainLayout,
       },
     },
     {
       path: "/buy-tv-sub",
-      component: BuyCable,
+      component: () => import("../pages/BuyTvSub.vue"),
       meta: {
         layout: MainLayout,
       },
     },
     {
       path: "/order-summary",
-      component: OrderSummary,
+      component: () => import("../pages/OrderSummary.vue"),
       meta: {
         layout: MainLayout,
       },
@@ -141,49 +132,49 @@ const router = createRouter({
     },
     {
       path: "/user.electricity",
-      component: ElectricityDiscos,
+      component: () => import("../pages/electricity/Electricity.vue"),
       meta: {
         layout: DashBoardLayout,
       },
     },
     {
       path: "/user.electricity/:name",
-      component: ElectricityForm,
+      component: () => import("../pages/electricity/ElectricityForm.vue"),
       meta: {
         layout: DashBoardLayout,
       },
     },
     {
       path: "/user.buy-airtime",
-      component: BuyAirtime,
+      component: () => import("../pages/airtime/BuyAirtime.vue"),
       meta: {
         layout: DashBoardLayout,
       },
     },
     {
       path: "/user.buy-data",
-      component: BuyData,
+      component: () => import("../pages/mobileData/BuyData.vue"),
       meta: {
         layout: DashBoardLayout,
       },
     },
     {
       path: "/user.buy-tv-sub",
-      component: BuyCable,
+      component: () => import("../pages/BuyTvSub.vue"),
       meta: {
         layout: DashBoardLayout,
       },
     },
     {
       path: "/user.order-summary",
-      component: OrderSummary,
+      component: () => import("../pages/OrderSummary.vue"),
       meta: {
         layout: DashBoardLayout,
       },
     },
     {
-      path: "/user.order-summary",
-      component: OrderSummary,
+      path: "/user.edu-collect",
+      component: () => import("../pages/EduCollect.vue"),
       meta: {
         layout: DashBoardLayout,
       },
