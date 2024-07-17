@@ -2,9 +2,6 @@ import { createRouter, createWebHistory } from "vue-router";
 import MainLayout from "../layouts/MainLayout.vue";
 import DashBoardLayout from "../layouts/DashBoardLayout.vue";
 
-const ElectricityDiscos = () => import("../pages/electricity/Electricity.vue");
-import Electricity from "../pages/electricity/Electricity.vue";
-
 const ElectricityForm = () =>
   import("../pages/electricity/ElectricityForm.vue");
 const BuyAirtime = () => import("../pages/airtime/BuyAirtime.vue");
@@ -39,7 +36,7 @@ const router = createRouter({
     },
     {
       path: "/electricity",
-      component: ElectricityDiscos,
+      component: () => import("../pages/electricity/Electricity.vue"),
       meta: {
         layout: MainLayout,
       },
